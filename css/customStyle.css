@@ -190,10 +190,11 @@ body {
 
 .custom-cta-button {
   border: none;
-  display: block;
   position: relative;
-  padding: 0.7em 2.4em;
-  font-size: 18px;
+  padding: 0.3em 0.7em;
+  border-radius: 3px;
+  font-size: 1em;
+  text-transform: uppercase;
   background: transparent;
   cursor: pointer;
   -webkit-user-select: none;
@@ -201,10 +202,10 @@ body {
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
-  color: royalblue;
+  color: #fff;
   z-index: 1;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 300;
  }
  
  .custom-cta-button span {
@@ -215,7 +216,7 @@ body {
   height: 100%;
   background: transparent;
   z-index: -1;
-  border: 4px solid royalblue;
+  border: 3px solid var(--primary);
  }
  
  .custom-cta-button span::before {
@@ -224,7 +225,7 @@ body {
   position: absolute;
   width: 8%;
   height: 500%;
-  background: var(--lightgray);
+  background: #141628;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-60deg);
@@ -239,7 +240,7 @@ body {
       -ms-transform: translate(-50%, -50%) rotate(-90deg);
           transform: translate(-50%, -50%) rotate(-90deg);
   width: 100%;
-  background: royalblue;
+  background: var(--primary);
  }
  
  .custom-cta-button:hover {
@@ -247,7 +248,7 @@ body {
  }
  
  .custom-cta-button:active span::before {
-  background: #2751cd;
+  background: var(--primary);
  }
 
 
