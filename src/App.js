@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// Deafult
+import { Fragment } from "react/cjs/react.production.min";
+
+// Sections
+import Hero from "./components/sections/hero/Hero";
+
+// UI Widgets
+import Nav from "./components/ui/nav/nav";
+import SideNav from "./components/ui/side-nav/SideNav";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <SideNav />
+      <Hero sectionID="home">
+        <Nav />
+      </Hero>
+    </Fragment>
   );
 }
 

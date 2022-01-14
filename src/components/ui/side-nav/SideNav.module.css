@@ -1,0 +1,55 @@
+@import url("../../../theme/siteColors.css");
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuButton {
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 2.5em;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.menuButton:hover {
+  color: var(--darkColor);
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #818181;
+  transition: all 400ms;
+}
+
+.closebtn:hover {
+  transform-style: preserve-3d;
+  transform: rotateZ(180deg);
+  color: var(--darkColor);
+}
+
+@media screen and (max-width: 750px) {
+  .menuButton {
+    font-size: 18px;
+  }
+}

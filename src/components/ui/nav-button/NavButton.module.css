@@ -1,0 +1,36 @@
+@import url("../../../theme/siteColors.css");
+
+
+.iconBtn:hover > .btnIcon > div {
+  width: 25px;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.btnIcon {
+  width: fit-content;
+  height: fit-content;
+}
+
+.btnIcon > div {
+  background-color: var(--primaryColor);
+  height: 4px;
+  display: block;
+  border-radius: 50px;
+  margin-left: auto;
+  transition: width 350ms, transform 900ms;
+}
+
+.btnIcon > div:nth-child(1) {
+  width: 25px;
+  margin-bottom: 4px;
+}
+
+.btnIcon > div:nth-child(2) {
+  width: 15px;
+  margin-bottom: 4px;
+}
+
+.btnIcon > div:nth-child(3) {
+  width: 20px;
+}
