@@ -1,17 +1,7 @@
-.linkedInIcoBG {
-  background-image: linear-gradient(180deg, #137fea, #0a66c2);
-}
+@import url("../../../theme/siteColors.css");
 
-.linkedInCtnBG {
-  background-image: linear-gradient(
-    180deg,
-    rgba(19, 127, 234, 0.3),
-    rgba(10, 102, 194, 0.3)
-  );
-}
-
-.lineHzero{
-    line-height: 0px;
+.lineHzero {
+  line-height: 0px;
 }
 
 .leftRound {
@@ -24,12 +14,22 @@
   border-bottom-right-radius: 4px;
 }
 
-.linkedInbtnHover {
+/* --------------------------------- LinkedIn --------------------------------- */
+
+.linkedInIcoBG {
+  background-image: var(--blueLinear);
+}
+
+.linkedInCtnBG {
+  background-image: var(--blueLinearLow);
+}
+
+.linkedInBtnHover {
   overflow: hidden;
   transition: all 500ms;
 }
 
-.linkedInbtnHover::before {
+.linkedInBtnHover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -38,10 +38,82 @@
   width: 0;
   z-index: -1;
   border-radius: 4px;
-  background-image: linear-gradient(180deg, #137fea, #0a66c2);
+  background-image: var(--blueLinear);
   transition: all 500ms;
 }
 
-.linkedInbtnHover:hover::before {
+.linkedInBtnHover:hover::before {
+  width: 100%;
+}
+
+/* --------------------------------- GitHub --------------------------------- */
+
+.gitHubIcoBG {
+  background-image: var(--whiteLinear);
+}
+
+.gitHubCtnBG {
+  background-image: var(--whiteLinearLow);
+}
+
+.gitHubBtnHover {
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+.gitHubBtnHover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  border-radius: 4px;
+  background-image: var(--whiteLinear);
+  transition: all 500ms;
+}
+
+.gitHubBtnHover:hover::before {
+  width: 100%;
+}
+
+.gitHubBtnHover > span {
+  transition: all 1s;
+}
+
+.gitHubBtnHover:hover > span {
+  color: #222222 !important;
+}
+
+/* --------------------------------- Behance --------------------------------- */
+
+.behanceIcoBG {
+  background-image: var(--blackLinear);
+}
+
+.behanceCtnBG {
+  background-image: var(--blackLinearLow);
+}
+
+.behanceBtnHover {
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+.behanceBtnHover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  border-radius: 4px;
+  background-image: var(--blackLinear);
+  transition: all 500ms;
+}
+
+.behanceBtnHover:hover::before {
   width: 100%;
 }

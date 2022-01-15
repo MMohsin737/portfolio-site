@@ -1,4 +1,45 @@
-:root{
- --primaryColor: #6CCB94;
- --darkColor: #141628;
+:root {
+  --primaryColor: #6ccb94;
+  --darkColor: #141628;
+
+  /* 
+    1. LinkedIn (Social Platfrom Account) 
+  */
+  --blueLinear: linear-gradient(180deg, #137fea, #0a66c2);
+  --blueLinearLow: linear-gradient(
+    180deg,
+    rgba(19, 127, 234, 0.3),
+    rgba(10, 102, 194, 0.3)
+  );
+
+  /* 
+    1. GitHub (Social Platfrom Account) 
+    2. Overroot (Company) 
+  */
+  --whiteLinear: linear-gradient(180deg, #e5e5e5, #d6d6d6);
+  --whiteLinearLow: linear-gradient(
+    180deg,
+    rgba(229, 229, 229, 0.3),
+    rgba(214, 214, 214, 0.3)
+  );
+
+  /* 
+    1. Behance (Social Platfrom Account) 
+  */
+  --blackLinear: linear-gradient(180deg, #303030, #222222);
+  --blackLinearLow: linear-gradient(
+    180deg,
+    rgba(48, 48, 48, 0.5),
+    rgba(34, 34, 34, 0.5)
+  );
+
+  /* 
+    1. Cipher Savvy (Company)
+  */
+  --redLinear: linear-gradient(180deg, #ed2d28, #aa1216);
+  --redLinearLow: linear-gradient(
+    180deg,
+    rgba(237, 45, 40, 0.5),
+    rgba(170, 18, 22, 0.5)
+  );
 }

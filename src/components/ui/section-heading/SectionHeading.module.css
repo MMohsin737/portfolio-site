@@ -1,0 +1,5 @@
+@import url("../../../theme/siteColors.css");
+
+.textPrimaryColor {
+  color: var(--primaryColor);
+}

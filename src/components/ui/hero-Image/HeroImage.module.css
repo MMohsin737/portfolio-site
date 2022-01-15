@@ -1,18 +1,17 @@
-.pulse {
+/* .pulse {
   margin: 100px;
   display: block;
   position: absolute;
-  top: -9px;
-  left: -96px;
-  z-index: -1;
+  bottom: 8.5vh;
   width: 23vw;
-  height: 23vw;
+  height: 48vh;
+  z-index: -1;
   border-radius: 100%;
   background: transparent;
-  cursor: pointer;
   box-shadow: 0 0 0 rgba(108, 203, 148, 0.6);
   animation: pulse 1.5s infinite;
 }
+
 .pulse:hover {
   animation: none;
 }
@@ -42,4 +41,10 @@
     -moz-box-shadow: 0 0 0 0 rgba(108, 203, 148, 0);
     box-shadow: 0 0 0 0 rgba(108, 203, 148, 0);
   }
-}
+} */
+
+/* @media screen and (min-width: 1900px) {
+  .pulse {
+    bottom: calc(100% - 94.6%);
+  }
+} */

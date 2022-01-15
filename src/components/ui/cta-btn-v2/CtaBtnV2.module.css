@@ -1,0 +1,41 @@
+@import url("../../../theme/siteColors.css");
+
+.btnV2 {
+  font-size: 23px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.btnV2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--primaryColor);
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 3px;
+}
+
+.btnV2:hover::before {
+  width: 100%;
+}
+
+.btnV2:hover {
+  color: var(--darkColor);
+}
+
+.btnV2:active:before {
+  background: var(--primaryColor);
+}
