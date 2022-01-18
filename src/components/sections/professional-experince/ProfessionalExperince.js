@@ -4,6 +4,8 @@ import CompanyExpCard from "../../ui/company-exp-card/CompanyExpCard";
 
 // Image
 import divderImg from "../../../assets/images/divider-image.svg";
+import cipherSavvyLogo from "../../../assets/images/cipher-savvy-logo.svg";
+import overrootLogo from "../../../assets/images/overroot-logo.png";
 
 const ProfessionalExperince = ({ sectionID }) => {
   return (
@@ -15,7 +17,7 @@ const ProfessionalExperince = ({ sectionID }) => {
 
       <div className={`flex flex-row justify-center`}>
         <CompanyExpCard
-          imgSrc=""
+          imgSrc={cipherSavvyLogo}
           jobTitle="Software Engineer"
           companyTitle="Cipher Savvy"
           location="Rawalpindi, Pakistan"
@@ -33,7 +35,7 @@ const ProfessionalExperince = ({ sectionID }) => {
         </div>
 
         <CompanyExpCard
-          imgSrc=""
+          imgSrc={overrootLogo}
           jobTitle="Software Engineer"
           companyTitle="Overroot"
           location="Rawalpindi, Pakistan"

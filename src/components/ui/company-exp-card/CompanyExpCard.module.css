@@ -1,0 +1,17 @@
+@import url("../../../theme/siteColors.css");
+
+.redIconBG {
+  background: var(--redLinear);
+}
+
+.redBodyBG {
+  background-color: var(--redLinearLow);
+}
+
+.whiteIconBG {
+  background: var(--whiteLinear);
+}
+
+.whiteBodyBG {
+  background-color: var(--whiteLinearLow);
+}

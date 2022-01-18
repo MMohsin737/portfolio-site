@@ -2,9 +2,7 @@
   --primaryColor: #6ccb94;
   --darkColor: #141628;
 
-  /* 
-    1. LinkedIn (Social Platfrom Account) 
-  */
+  /* LinkedIn */
   --blueLinear: linear-gradient(180deg, #137fea, #0a66c2);
   --blueLinearLow: linear-gradient(
     180deg,
@@ -12,10 +10,7 @@
     rgba(10, 102, 194, 0.3)
   );
 
-  /* 
-    1. GitHub (Social Platfrom Account) 
-    2. Overroot (Company) 
-  */
+  /* GitHub, Udemy, Overroot, Iqra University */
   --whiteLinear: linear-gradient(180deg, #e5e5e5, #d6d6d6);
   --whiteLinearLow: linear-gradient(
     180deg,
@@ -23,9 +18,7 @@
     rgba(214, 214, 214, 0.3)
   );
 
-  /* 
-    1. Behance (Social Platfrom Account) 
-  */
+  /* Behance */
   --blackLinear: linear-gradient(180deg, #303030, #222222);
   --blackLinearLow: linear-gradient(
     180deg,
@@ -33,9 +26,7 @@
     rgba(34, 34, 34, 0.5)
   );
 
-  /* 
-    1. Cipher Savvy (Company)
-  */
+  /* Cipher Savvy */
   --redLinear: linear-gradient(180deg, #ed2d28, #aa1216);
   --redLinearLow: linear-gradient(
     180deg,
