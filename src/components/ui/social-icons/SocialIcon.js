@@ -39,7 +39,7 @@ const SocialIcon = ({ styleClasses, styleSpacing, type, onPressed }) => {
       } ${btnBG[type.toLowerCase()]} ${classes.rightRound} ${styleSpacing}`}
     >
       <div
-        className={`${styleClasses} p-2 mr-2 ${iconBG[type.toLowerCase()]} ${
+        className={`${styleClasses} p-1 mr-2 ${iconBG[type.toLowerCase()]} ${
           classes.leftRound
         }`}
       >

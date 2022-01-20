@@ -5,7 +5,7 @@ const CtaBtnV1 = ({ customStyle, title, onPressed }) => {
   return (
     <button
       onClick={onPressed}
-      className={`${classes.btnV1} ${customStyle} px-4 py-2 font-normal`}
+      className={`${classes.btnV1} ${customStyle} px-4 py-2 font-light`}
     >
       {title}
       <span></span>

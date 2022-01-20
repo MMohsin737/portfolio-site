@@ -2,7 +2,7 @@
   --primaryColor: #6ccb94;
   --darkColor: #141628;
 
-  /*  LinkedIn */
+  /* LinkedIn */
   --blueLinear: linear-gradient(180deg, #137fea, #0a66c2);
   --blueLinearLow: linear-gradient(
     180deg,
@@ -10,7 +10,7 @@
     rgba(10, 102, 194, 0.3)
   );
 
-  /*  GitHub */
+  /* GitHub, Udemy, Overroot, Iqra University */
   --whiteLinear: linear-gradient(180deg, #e5e5e5, #d6d6d6);
   --whiteLinearLow: linear-gradient(
     180deg,
@@ -30,15 +30,7 @@
   --redLinear: linear-gradient(180deg, #ed2d28, #aa1216);
   --redLinearLow: linear-gradient(
     180deg,
-    rgba(237, 45, 40, 0.2),
-    rgba(189, 61, 65, 0.2)
-  );
-
-  /*  Overroot */
-  --whiteLinear2: linear-gradient(180deg, #ffffff, #e2e2e2);
-  --whiteLinearLow2: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2),
-    rgba(226, 226, 226, 0.2)
+    rgba(237, 45, 40, 0.5),
+    rgba(170, 18, 22, 0.5)
   );
 }

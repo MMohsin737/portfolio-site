@@ -1,7 +1,7 @@
 @import url("../../../theme/siteColors.css");
 
 .btnV2 {
-  font-size: 23px;
+  font-family: inherit;
   cursor: pointer;
   border: none;
   outline: none;
@@ -11,7 +11,7 @@
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 1;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .btnV2::before {
@@ -25,7 +25,7 @@
   z-index: -1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .btnV2:hover::before {

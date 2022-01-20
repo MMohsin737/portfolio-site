@@ -6,7 +6,7 @@
 
 const Hero = ({ imageSrc }) => {
   return (
-    <div className={`w-2/5`}>
+    <div className={``}>
       <img className={`h-full w-full object-contain`} src={imageSrc} alt="" />
       {/* <div className={`${classes.pulse}`}></div> */}
     </div>
