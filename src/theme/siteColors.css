@@ -30,7 +30,7 @@
   --redLinear: linear-gradient(180deg, #ed2d28, #aa1216);
   --redLinearLow: linear-gradient(
     180deg,
-    rgba(237, 45, 40, 0.5),
-    rgba(170, 18, 22, 0.5)
+    rgba(237, 45, 40, 0.2),
+    rgba(170, 18, 22, 0.2)
   );
 }

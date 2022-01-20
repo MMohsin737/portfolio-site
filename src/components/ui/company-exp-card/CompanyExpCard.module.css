@@ -5,7 +5,7 @@
 }
 
 .redBodyBG {
-  background-color: var(--redLinearLow);
+  background: var(--redLinearLow);
 }
 
 .whiteIconBG {
@@ -13,5 +13,5 @@
 }
 
 .whiteBodyBG {
-  background-color: var(--whiteLinearLow);
+  background: var(--whiteLinearLow);
 }
