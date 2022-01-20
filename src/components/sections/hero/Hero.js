@@ -17,35 +17,21 @@ const Hero = ({ sectionID, children }) => {
       <div className={`w-full`}>{children}</div>
 
       <div
-        className={`mt-10 flex-grow-1  h-full flex xl:flex-row lg:flex-row md:flex-row flex-col-reverse`}
+        className={`mt-10 h-full grid 2xl:grid-rows-1 xl:grid-rows-1 lg:grid-rows-1 md:grid-rows-1 grid-cols-1
+        2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-rows-2 gap-4`}
       >
         <div className={`flex-1 flex flex-col justify-center items-start`}>
           <HeroTextConent />
 
-          <div className={`flex flex-row justify-between mt-6`}>
-            <SocialIcon
-              styleClasses={`xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-9 h-9`}
-              styleSpacing={`mr-4`}
-              type="LinkedIn"
-              onPressed={() => {}}
-            />
-            <SocialIcon
-              styleClasses={`xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-9 h-9`}
-              styleSpacing={`mr-4`}
-              type="GitHub"
-              onPressed={() => {}}
-            />
-            <SocialIcon
-              styleClasses={`xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-9 h-9`}
-              styleSpacing={``}
-              type="behance"
-              onPressed={() => {}}
-            />
+          <div className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-col flex-row justify-between mt-3 `}>
+            <SocialIcon styleClasses={`w-7 h-7`} styleSpacing={`2xl:mr-4 xl:mr-4 lg:mr-4 md:mt-2 mr-4`} type="LinkedIn" onPressed={() => {}} />
+            <SocialIcon styleClasses={`w-7 h-7`} styleSpacing={`2xl:mr-4 xl:mr-4 lg:mr-4 md:mt-2 mr-4`} type="GitHub" onPressed={() => {}} />
+            <SocialIcon styleClasses={`w-7 h-7`} styleSpacing={`2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-2 mt-0`} type="behance" onPressed={() => {}} />
           </div>
 
           <div className={`flex flex-row justify-between mt-6`}>
-            <CtaBtnV1 title="See My Work" customStyle={`mr-5 text-2xl`} onPressed={() => {}} />
-            <CtaBtnV1 title="Lets's Talk" customStyle={`text-2xl`} onPressed={() => {}} />
+            <CtaBtnV1 title="See My Work" customStyle={`mr-5 2xl:text-xl xl:text-xl lg:text-xl text-sm`} onPressed={() => {}} />
+            <CtaBtnV1 title="Lets's Talk" customStyle={`2xl:text-xl xl:text-xl lg:text-xl text-sm`} onPressed={() => {}} />
           </div>
         </div>
 

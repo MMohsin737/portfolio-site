@@ -15,7 +15,7 @@
   color: #fff;
   z-index: 1;
   font-family: inherit;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .btnV1 span {
@@ -55,7 +55,6 @@
 }
 
 .btnV1:hover {
-  font-weight: 400;
   color: var(--darkColor);
 }
 

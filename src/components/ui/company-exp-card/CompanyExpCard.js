@@ -6,7 +6,7 @@ const CompanyExpCard = ({ imgSrc, jobTitle, companyTitle, location, dateJoiningE
   const cardBG = backgroundColor.toLowerCase() === "red" ? classes.redBodyBG : classes.whiteBodyBG;
 
   return <div>
-    <div className={`w-52 p-14 ${icoBG}`}>
+    <div className={`w-52 p-16 ${icoBG}`}>
       <img className={`w-full h-full object-contain`} src={imgSrc} alt={companyTitle} />
     </div>
   </div>;
