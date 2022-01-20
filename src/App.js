@@ -5,6 +5,7 @@ import { Fragment } from "react/cjs/react.production.min";
 import Hero from "./components/sections/hero/Hero";
 import AboutMe from "./components/sections/about-me/AboutMe";
 import ProfessionalExperince from "./components/sections/professional-experince/ProfessionalExperince";
+import MyExpertise from "./components/sections/my-expertise/MyExpertise";
 
 // UI Widgets
 import Nav from "./components/ui/nav/nav";
@@ -22,6 +23,8 @@ function App() {
       <AboutMe sectionID="about-me" />
 
       <ProfessionalExperince sectionID="professional-experince" />
+
+      <MyExpertise sectionID="my-expertise" />
     </Fragment>
   );
 }
