@@ -14,36 +14,49 @@ import classes from "./Education.module.css";
 
 const Education = ({ sectionID }) => {
   return (
-    <div id={sectionID} className={`mt-24 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}>
+    <div
+      id={sectionID}
+      className={`mt-24 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
+    >
       <SectionHeading title="Education &" subtitle="Certifications" />
 
-      <div className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}>
+      <div
+        className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}
+      >
         {/* Academic */}
         <div className={`flex-1`}>
-          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Academic</h6>
+          <h6
+            className={`uppercase text-white text-3xl text-center font-light`}
+          >
+            Academic
+          </h6>
 
           <div className={`mt-5`}>
-            <EducationCard
-              cardType="academic"
-              icon={szabistIcon}
-              title={"MS - Data Science".toUpperCase()}
-              instituteName="SZABIST"
-              joiningPassing="2019 to 2021"
-              credentialID=""
-              certificateURL=""
-              customSpacing={`mb-4`}
-            />
+            <div className="">
+              <EducationCard
+                cardType="academic"
+                icon={szabistIcon}
+                title={"MS - Data Science".toUpperCase()}
+                instituteName="SZABIST"
+                joiningPassing="2019 to 2021"
+                credentialID=""
+                certificateURL=""
+                customSpacing={`mb-4`}
+              />
+            </div>
 
-            <EducationCard
-              cardType="academic"
-              icon={iqraIcon}
-              title={"MS - Data Science".toUpperCase()}
-              instituteName="IQRA University"
-              joiningPassing="2014 to 2018"
-              credentialID=""
-              certificateURL=""
-              customSpacing={``}
-            />
+            <div className="">
+              <EducationCard
+                cardType="academic"
+                icon={iqraIcon}
+                title={"BS - Computer Science".toUpperCase()}
+                instituteName="IQRA University"
+                joiningPassing="2014 to 2018"
+                credentialID=""
+                certificateURL=""
+                customSpacing={``}
+              />
+            </div>
           </div>
         </div>
 
@@ -53,8 +66,12 @@ const Education = ({ sectionID }) => {
         />
 
         {/* Certificates */}
-        <div className={`flex-1`}>
-          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Certificates</h6>
+        <div className={`flex-1 relative`}>
+          <h6
+            className={`uppercase text-white text-3xl text-center font-light`}
+          >
+            Certificates
+          </h6>
 
           <div className={`mt-5`}>
             <EducationCard
