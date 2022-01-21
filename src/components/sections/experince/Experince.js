@@ -8,9 +8,9 @@ import cipherSavvyLogo from "../../../assets/images/cipher-savvy-logo.svg";
 import overrootLogo from "../../../assets/images/overroot-logo.png";
 
 // Styling
-import classes from "./ProfessionalExperince.module.css";
+import classes from "./Experince.module.css";
 
-const ProfessionalExperince = ({ sectionID }) => {
+const Experince = ({ sectionID }) => {
   return (
     <div
       id={sectionID}
@@ -67,4 +67,4 @@ const ProfessionalExperince = ({ sectionID }) => {
   );
 };
 
-export default ProfessionalExperince;
+export default Experince;

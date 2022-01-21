@@ -3,9 +3,12 @@ import { Fragment } from "react/cjs/react.production.min";
 
 // Sections
 import Hero from "./components/sections/hero/Hero";
-import AboutMe from "./components/sections/about-me/AboutMe";
-import ProfessionalExperince from "./components/sections/professional-experince/ProfessionalExperince";
-import MyExpertise from "./components/sections/my-expertise/MyExpertise";
+import AboutMe from "./components/sections/aboutMe/AboutMe";
+import Experince from "./components/sections/experince/Experince";
+import ToolsTechnologies from "./components/sections/toolsTechnologies/ToolsTechnologies";
+import Education from "./components/sections/education/Education";
+import Portfolio from "./components/sections/portfolio/Portfolio";
+
 
 // UI Widgets
 import Nav from "./components/ui/nav/nav";
@@ -16,15 +19,19 @@ function App() {
     <Fragment>
       <SideNav />
 
-      <Hero sectionID="home">
+      <Hero sectionID="hero">
         <Nav />
       </Hero>
 
-      <AboutMe sectionID="about-me" />
+      <AboutMe sectionID="aboutMe" />
 
-      <ProfessionalExperince sectionID="professional-experince" />
+      <Experince sectionID="experince" />
 
-      <MyExpertise sectionID="my-expertise" />
+      <ToolsTechnologies sectionID="toolsTechnologies" />
+
+      <Education sectionID="education" />
+      
+      <Portfolio sectionID="portfolio" />
     </Fragment>
   );
 }

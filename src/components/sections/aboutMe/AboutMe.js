@@ -14,10 +14,9 @@ const AboutMe = ({ sectionID }) => {
       <SectionHeading title="About" subtitle="Me" />
 
       <div
-        className={`grid 2xl:grid-rows-1 xl:grid-rows-1 lg:grid-rows-1 md:grid-rows-1 grid-cols-1
-                    2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-rows-2 gap-4`}
+        className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col`}
       >
-        <div className={``}>
+        <div className={`w-1/2`}>
           <img
             className={`w-full h-full object-contain`}
             src={aboutMeImage}
@@ -26,10 +25,10 @@ const AboutMe = ({ sectionID }) => {
         </div>
 
         <div
-          className={`flex flex-col justify-center items-start text-white font-light text-justify
-                        2xl:text-2xl xl:text-3xl lg:text-3xl md:text-3xl text-3xl`}
+          className={`w-1/2 flex flex-col justify-center items-start text-white font-light text-justify
+                      2xl:text-lg xl:text-lg lg:text-lg md:text-lg text-lg ml-5`}
         >
-          <p className={`leading-9`}>
+          <p className={`leading-8`}>
             I possess a positive “can-do” attitude where I am able to walk the
             extra mile in order to get the job done. I am also creative and
             self-motivated, where I am able to work efficiently and effectively

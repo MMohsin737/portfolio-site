@@ -9,9 +9,9 @@
 }
 
 .whiteIconBG {
-  background: var(--whiteLinear);
+  background: var(--whiteLinear_2);
 }
 
 .whiteBodyBG {
-  background: var(--whiteLinearLow);
+  background: var(--whiteLinearLow_2);
 }

@@ -3,7 +3,7 @@ import SectionHeading from "../../ui/section-heading/SectionHeading";
 import SectionDivider from "../../ui/section-divider/SectionDivider";
 
 // Styling
-import classes from "./MyExpertise.module.css";
+import classes from "./ToolsTechnologies.module.css";
 
 // Image
 import figma from "../../../assets/images/figma-icon.svg";
@@ -24,7 +24,7 @@ import expressIcon from "../../../assets/images/express-js.svg";
 import nodeIcon from "../../../assets/images/node-js.svg";
 import reactJSicon from "../../../assets/images/react-js.svg";
 
-const MyExpertise = ({ sectionID }) => {
+const ToolsTechnologies = ({ sectionID }) => {
   const designIcons = [figma, xd, ai, ps, blender];
   const developmentIcons = [
     antUIdesign,
@@ -34,51 +34,34 @@ const MyExpertise = ({ sectionID }) => {
     css3,
     html5,
     jsIcon,
+    nodeIcon,
+    expressIcon,
+    reactJSicon,
     flutter,
     dart,
-    expressIcon,
-    nodeIcon,
-    reactJSicon,
   ];
 
   return (
-    <div
-      id={sectionID}
-      className={`mt-14 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
-    >
-      <SectionHeading title="My" subtitle="Expertise" />
+    <div id={sectionID} className={`mt-14 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}>
+      <SectionHeading title="Tools &" subtitle="Technologies" />
 
-      <div
-        className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}
-      >
+      <div className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}>
         {/* Design Icons */}
         <div className={`flex-1`}>
-          <h6
-            className={`uppercase text-white text-4xl text-center font-light`}
-          >
-            Design
-          </h6>
+          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Design</h6>
 
-          <div className={`mt-10 w-96 mx-auto grid grid-cols-3 gap-4`}>
+          <div className={`mt-5 w-4/5 mx-auto grid grid-cols-5 gap-1`}>
             {designIcons.map((item, index) => {
               if (index === 0) {
                 return (
-                  <div className={`w-12 mx-auto my-5`}>
-                    <img
-                      className={`w-full h-full object-contain`}
-                      src={item}
-                      alt=""
-                    />
+                  <div className={`w-8 mx-auto my-5`}>
+                    <img className={`w-full h-full object-contain`} src={item} alt="" />
                   </div>
                 );
               } else {
                 return (
-                  <div className={`w-20 mx-auto my-5`}>
-                    <img
-                      className={`w-full h-full object-contain`}
-                      src={item}
-                      alt=""
-                    />
+                  <div className={`w-14 mx-auto my-5`}>
+                    <img className={`w-full h-full object-contain`} src={item} alt="" />
                   </div>
                 );
               }
@@ -87,27 +70,19 @@ const MyExpertise = ({ sectionID }) => {
         </div>
 
         <SectionDivider
-          dividerHeight={`my-auto ${classes["height-520px"]}`}
+          dividerHeight={`my-auto ${classes["height-260px"]}`}
           customStyle={`xl:block lg:block md:block hidden`}
         />
 
         {/* Development Icons */}
         <div className={`flex-1`}>
-          <h6
-            className={`uppercase text-white text-4xl text-center font-light`}
-          >
-            Development
-          </h6>
+          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Development</h6>
 
-          <div className={`mt-10 w-3/4 mx-auto grid grid-cols-3 gap-4`}>
+          <div className={`mt-5 w-4/5 mx-auto grid grid-cols-5 gap-1`}>
             {developmentIcons.map((item, index) => {
               return (
-                <div className={`w-20 mx-auto my-5`}>
-                  <img
-                    className={`w-full h-full object-contain`}
-                    src={item}
-                    alt=""
-                  />
+                <div className={`w-14 mx-auto my-5`}>
+                  <img className={`w-full h-full object-contain`} src={item} alt="" />
                 </div>
               );
             })}
@@ -118,4 +93,4 @@ const MyExpertise = ({ sectionID }) => {
   );
 };
 
-export default MyExpertise;
+export default ToolsTechnologies;
