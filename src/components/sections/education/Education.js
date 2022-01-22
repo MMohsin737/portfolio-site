@@ -21,42 +21,40 @@ const Education = ({ sectionID }) => {
       <SectionHeading title="Education &" subtitle="Certifications" />
 
       <div
-        className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}
+        className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start ${classes["height-360px"]}`}
       >
         {/* Academic */}
-        <div className={`flex-1`}>
+        <div className={`flex-1 flex flex-col`}>
           <h6
             className={`uppercase text-white text-3xl text-center font-light`}
           >
             Academic
           </h6>
 
-          <div className={`mt-5`}>
-            <div className="">
-              <EducationCard
-                cardType="academic"
-                icon={szabistIcon}
-                title={"MS - Data Science".toUpperCase()}
-                instituteName="SZABIST"
-                joiningPassing="2019 to 2021"
-                credentialID=""
-                certificateURL=""
-                customSpacing={`mb-4`}
-              />
-            </div>
+          <div
+            className={`mt-14 h-full flex-1 flex flex-col justify-between items-center`}
+          >
+            <EducationCard
+              cardType="academic"
+              icon={szabistIcon}
+              title={"MS - Data Science".toUpperCase()}
+              instituteName="SZABIST"
+              joiningPassing="2019 to 2021"
+              info="Data Visualization - Big Data Analytics"
+              certificateURL=""
+              customSpacing={`top-0`}
+            />
 
-            <div className="">
-              <EducationCard
-                cardType="academic"
-                icon={iqraIcon}
-                title={"BS - Computer Science".toUpperCase()}
-                instituteName="IQRA University"
-                joiningPassing="2014 to 2018"
-                credentialID=""
-                certificateURL=""
-                customSpacing={``}
-              />
-            </div>
+            <EducationCard
+              cardType="academic"
+              icon={iqraIcon}
+              title={"BS - Computer Science".toUpperCase()}
+              instituteName="IQRA University"
+              joiningPassing="2014 to 2018"
+              info="Game Development - Application Development"
+              certificateURL=""
+              customSpacing={`${classes["top-100"]}`}
+            />
           </div>
         </div>
 
@@ -73,16 +71,18 @@ const Education = ({ sectionID }) => {
             Certificates
           </h6>
 
-          <div className={`mt-5`}>
+          <div
+            className={`mt-14 h-full flex-1 flex flex-col justify-between items-center`}
+          >
             <EducationCard
               cardType="certificate"
               icon={udemyIcon}
               title="Flutter & Dart - The Complete Guide [2020 Edition]"
               instituteName="Udemy"
               joiningPassing={"Aug 2020".toUpperCase()}
-              credentialID="UC-3cd983fc-871c-42eb-9a5d-4be074525395"
+              info="UC-3cd983fc-871c-42eb-9a5d-4be074525395"
               certificateURL="http://ude.my/UC-3cd983fc-871c-42eb-9a5d-4be074525395"
-              customSpacing={`mb-4`}
+              customSpacing={`top-0`}
             />
 
             <EducationCard
@@ -91,9 +91,9 @@ const Education = ({ sectionID }) => {
               title="Learn Photoshop, Web Design & Profitable Freelancing"
               instituteName="Udemy"
               joiningPassing={"May 2020".toUpperCase()}
-              credentialID="UC-20b35940-81d1-44bf-a640-a51836471b77"
+              info="UC-20b35940-81d1-44bf-a640-a51836471b77"
               certificateURL="https://ude.my/UC-20b35940-81d1-44bf-a640-a51836471b77"
-              customSpacing={`mb-4`}
+              customSpacing={`${classes["top-100"]}`}
             />
 
             <EducationCard
@@ -102,9 +102,9 @@ const Education = ({ sectionID }) => {
               title="User Research and Design"
               instituteName="Coursera"
               joiningPassing={"Aug 2020".toUpperCase()}
-              credentialID="93CR7GXEJQPZ"
+              info="93CR7GXEJQPZ"
               certificateURL="https://coursera.org/verify/93CR7GXEJQPZ"
-              customSpacing={``}
+              customSpacing={`${classes["top-200"]}`}
             />
           </div>
         </div>

@@ -47,9 +47,9 @@
 }
 
 .btnV1:hover span::before {
-  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-  -ms-transform: translate(-50%, -50%) rotate(-90deg);
-  transform: translate(-50%, -50%) rotate(-90deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg) scale(1.5);
+  -ms-transform: translate(-50%, -50%) rotate(-90deg) scale(1.5);
+  transform: translate(-50%, -50%) rotate(-90deg) scale(1.5);
   width: 100%;
   background: var(--primaryColor);
 }

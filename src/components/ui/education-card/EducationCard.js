@@ -1,5 +1,6 @@
 // Styling
 import classes from "./EducationCard.module.css";
+import "../../../theme/utilities.css";
 
 const EducationCard = ({
   cardType,
@@ -7,7 +8,7 @@ const EducationCard = ({
   title,
   instituteName,
   joiningPassing,
-  credentialID,
+  info,
   certificateURL,
   customSpacing,
 }) => {
@@ -28,104 +29,131 @@ const EducationCard = ({
   };
 
   const instituteCardBodyFront = (
-    <div className={`flex flex-col w-full items-center mr-3 justify-center `}>
-      {/* Title */}
-      <h2 className={`text-lg w-full text-left`}>{title}</h2>
+    <div className={`${classes["flip-card-front"]}`}>
+      <div className={`${classes["flip-card-inner"]}`}>
+        <div className={`mx-auto flex flex-row text-white ${bodybg[mapKey]}`}>
+          <div
+            className={`mr-3 w-28 h-20 p-2 flex justify-center items-center ${iconbg[mapKey]}`}
+          >
+            <img
+              className={`h-14 w-16 object-contain`}
+              src={icon}
+              alt={instituteName}
+            />
+          </div>
+          <div
+            className={`flex flex-col w-full items-center mr-3 justify-center `}
+          >
+            {/* Title */}
+            <h2 className={`text-lg w-full text-left`}>{title}</h2>
 
-      {/* Divider */}
-      <div className={`${classes.cardDividerVertical}`}></div>
+            {/* Divider */}
+            <div className={`${classes.cardDividerVertical}`}></div>
 
-      {/* Other Info */}
-      <div
-        className={`w-full text-left flex flex-col justify-center items-start`}
-      >
-        <span className={`block text-sm`}>{instituteName}</span>
-        <span className={`block text-sm`}>{joiningPassing}</span>
+            {/* Other Info */}
+            <div
+              className={`w-full text-left flex flex-col justify-center items-start`}
+            >
+              <span className={`block text-sm`}>{instituteName}</span>
+              <span className={`block text-sm`}>{joiningPassing}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 
   const instituteCardBodyBack = (
-    <div className={`${classes["flip-card-back"]} flex justify-center items-center`}>
-      <div className={`flex flex-row w-5/6 items-center pr-3 h-20 ${iconbg[mapKey]}`}>
-        <h1 className="text-center text-white">Hello</h1>
+    <div className={`${classes["flip-card-back"]}`}>
+      <div className={`${classes["flip-card-inner"]}`}>
+        <div
+          className={`flex flex-col justify-center items-center p-2 h-20 ${bodybg[mapKey]}`}
+        >
+          <h4 className={`text-white text-base font-semibold uppercase`}>
+            Specialization
+          </h4>
+          <h4 className={`text-white text-base`}>{info}</h4>
+        </div>
       </div>
     </div>
   );
 
   const certificateCardBodyFront = (
-    <div className={`flex flex-row w-full items-center pr-3`}>
-      {/* Title */}
-      <h2 className={`flex-grow text-base w-3/4 text-left`}>{title}</h2>
+    <div className={`${classes["flip-card-front"]}`}>
+      <div className={`${classes["flip-card-inner"]}`}>
+        <div className={`mx-auto flex flex-row text-white ${bodybg[mapKey]}`}>
+          <div
+            className={`mr-3 w-28 h-20 p-2 flex justify-center items-center ${iconbg[mapKey]}`}
+          >
+            <img
+              className={`h-14 w-16 object-contain`}
+              src={icon}
+              alt={instituteName}
+            />
+          </div>
+          <div className={`flex flex-row w-full items-center pr-3`}>
+            {/* Title */}
+            <h2 className={`flex-grow text-base w-3/4 text-left`}>{title}</h2>
 
-      <div className={`flex flex-row`}>
-        {/* Divider */}
-        <div className={`${classes.cardDividerHorizontal}`}></div>
+            <div className={`flex flex-row`}>
+              {/* Divider */}
+              <div className={`${classes.cardDividerHorizontal}`}></div>
 
-        {/* Other Info */}
-        <div
-          className={`w-full text-right ml-auto flex flex-col justify-center items-start`}
-        >
-          <span className={`block w-full text-xs text-right`}>
-            {instituteName}
-          </span>
-          <span className={`block w-full text-xs text-right`}>
-            {joiningPassing}
-          </span>
+              {/* Other Info */}
+              <div
+                className={`w-full text-right ml-auto flex flex-col justify-center items-start`}
+              >
+                <span className={`block w-full text-xs text-right`}>
+                  {instituteName}
+                </span>
+                <span className={`block w-full text-xs text-right`}>
+                  {joiningPassing}
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 
   const certificateCardBodyBack = (
-    <div className={`${classes["flip-card-back"]} flex justify-center items-center`}>
-      <div className={`flex flex-row w-5/6 items-center pr-3 h-20 ${iconbg[mapKey]}`}>
-        <h1 className="text-center text-white">Hello</h1>
+    <div className={`${classes["flip-card-back"]}`}>
+      <div className={`${classes["flip-card-inner"]}`}>
+        <div
+          className={`flex flex-col justify-center items-center p-2 h-20 ${bodybg[mapKey]}`}
+        >
+          <h4 className={`text-white text-base`}>{info}</h4>
+          <a
+            target="_blank"
+            className={`bg-transparent text-white text-sm mt-1`}
+            href={certificateURL}
+            rel="noreferrer"
+          >
+            See Credentials
+          </a>
+        </div>
       </div>
     </div>
   );
 
-  const cardBodyFront =
+  const cardFront =
     cardType.toLowerCase() === "academic"
       ? instituteCardBodyFront
       : certificateCardBodyFront;
-  const cardBodyBack =
+
+  const cardBack =
     cardType.toLowerCase() === "academic"
       ? instituteCardBodyBack
       : certificateCardBodyBack;
 
   return (
-    <div className={`${classes["flip-card"]} relative`}>
-      <div className={`${classes["flip-card-inner"]}`}>
-        <div className={`${classes["flip-card-front"]}`}>
-          <div
-            className={`mx-auto flex flex-row w-5/6 text-white
-                  ${classes["flip-card-inner"]} ${customSpacing} ${bodybg[mapKey]}`}
-          >
-            <div
-              className={`mr-3 w-28 h-20 p-2 flex justify-center items-center ${iconbg[mapKey]}`}
-            >
-              <img
-                className={`h-14 w-16 object-contain`}
-                src={icon}
-                alt={instituteName}
-              />
-            </div>
-            {cardBodyFront}
-          </div>
-        </div>
-        {cardBodyBack}
-      </div>
+    <div
+      className={`w-5/6 ${classes["flip-card"]} ${customSpacing} notSelectable`}
+    >
+      {cardFront}
+      {cardBack}
     </div>
-    // <div
-    //   className={`mx-auto flex flex-row w-5/6 text-white
-    //               ${classes["flip-card-inner"]} ${customSpacing} ${bodybg[mapKey]}`}
-    // >
-    //   <div className={`mr-3 w-28 h-20 p-2 flex justify-center items-center ${iconbg[mapKey]}`}>
-    //     <img className={`h-14 w-16 object-contain`} src={icon} alt={instituteName} />
-    //   </div>
-    //   {cardBodyFront}
-    // </div>
   );
 };
 
