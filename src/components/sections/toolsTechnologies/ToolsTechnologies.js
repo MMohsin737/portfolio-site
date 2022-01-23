@@ -43,7 +43,7 @@ const ToolsTechnologies = ({ sectionID }) => {
 
   return (
     <div id={sectionID} className={`mt-14 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}>
-      <SectionHeading title="Tools &" subtitle="Technologies" />
+      <SectionHeading title="Technologies" subtitle="" />
 
       <div className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}>
         {/* Design Icons */}

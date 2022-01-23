@@ -16,7 +16,7 @@ const Experince = ({ sectionID }) => {
       id={sectionID}
       className={`mt-24 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
     >
-      <SectionHeading title="Professional" subtitle="Experince" />
+      <SectionHeading title="Experince" />
 
       <div className={`flex flex-row justify-center`}>
         <div className={`flex flex-col`}>

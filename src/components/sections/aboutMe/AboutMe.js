@@ -11,7 +11,7 @@ const AboutMe = ({ sectionID }) => {
       id={sectionID}
       className={`mt-14 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
     >
-      <SectionHeading title="About" subtitle="Me" />
+      <SectionHeading title="About Me" />
 
       <div
         className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col`}

@@ -3,3 +3,7 @@
 .textPrimaryColor {
   color: var(--primaryColor);
 }
+
+.letterSpacing10 {
+  letter-spacing: 10px;
+}

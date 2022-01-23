@@ -59,15 +59,15 @@ const Portfolio = ({ sectionID }) => {
       id={sectionID}
       className={`mt-14 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
     >
-      <SectionHeading title="My" subtitle="Portfolio" />
+      <SectionHeading title="Portfolio" />
 
       <div className={`w-full grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5`}>
         {myProjets.map((item, index) => (
           <div
-            className={`overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}
+            className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}
           >
             <img
-              className={`w-full h-auto object-cover ${
+              className={`w-full h-auto object-fill ${
                 index === 1 && scaleImg
               }`}
               src={item.thumbnail}
@@ -106,12 +106,12 @@ const Portfolio = ({ sectionID }) => {
 
       <div className="w-full flex flex-row items-center justify-center mt-8">
         <CtaBtnV1
-          title="See More Designs"
+          title="More Designs"
           customStyle={`mr-5 2xl:text-xl xl:text-xl lg:text-xl text-sm`}
           onPressed={() => {}}
         />
         <CtaBtnV1
-          title="See Developed Projets"
+          title="More Live Projets"
           customStyle={`2xl:text-xl xl:text-xl lg:text-xl text-sm`}
           onPressed={() => {}}
         />

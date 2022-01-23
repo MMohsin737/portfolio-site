@@ -8,7 +8,7 @@ import Experince from "./components/sections/experince/Experince";
 import ToolsTechnologies from "./components/sections/toolsTechnologies/ToolsTechnologies";
 import Education from "./components/sections/education/Education";
 import Portfolio from "./components/sections/portfolio/Portfolio";
-import Testimonials from "./components/sections/testimonials/Testimonials";
+import LetsTalk from "./components/sections/letsTalk/LetsTalk";
 
 // UI Widgets
 import Nav from "./components/ui/nav/nav";
@@ -33,7 +33,7 @@ function App() {
 
       <Portfolio sectionID="portfolio" />
 
-      <Testimonials />
+      <LetsTalk sectionID="letsTalk" />
     </Fragment>
   );
 }

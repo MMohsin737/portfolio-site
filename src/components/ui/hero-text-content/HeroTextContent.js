@@ -3,7 +3,7 @@ import classes from "./HeroTextContent.module.css";
 
 const HeroTextConent = () => {
   return (
-    <div>
+    <div className="w-full">
       <h1
         className={`2xl:text-7xl xl:text-5xl lg:text-4xl md:text-4xl text-5xl text-white font-light
                       2xl:text-left xl:text-left lg:text-left md:text-left text-center`}

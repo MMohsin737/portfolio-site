@@ -12,32 +12,34 @@ const Hero = ({ sectionID, children }) => {
   return (
     <div
       id={sectionID}
-      className={`flex flex-col py-10 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5 items-center`}
+      className={`flex flex-col px-4 py-10 mx-auto 2xl:container xl:container lg:container md:container container items-center`}
     >
       <div className={`w-full`}>{children}</div>
 
-      <div className={`mt-10 h-full flex flex-row justify-center items-center`}>
-        <div className={`flex-1 flex 2xl:flex-col xl:flex-col lg:flex-col md:flex-col flex-row-reverse justify-center items-start`}>
+      <div className={`w-full mt-10 h-full flex md:flex-row flex-col-reverse justify-between items-center`}>
+        <div
+          className={`flex-1 flex flex-col justify-center items-start`}
+        >
           <HeroTextConent />
 
           <div
-            className={`flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-col flex-row justify-between mt-3 `}
+            className={`flex flex-row w-full md:justify-start justify-center mt-3`}
           >
             <SocialIcon
               styleClasses={`w-8 h-8`}
-              styleSpacing={`2xl:mr-4 xl:mr-4 lg:mr-4 md:mt-2 mr-4`}
+              styleSpacing={`mr-4`}
               type="LinkedIn"
               onPressed={() => {}}
             />
             <SocialIcon
               styleClasses={`w-8 h-8`}
-              styleSpacing={`2xl:mr-4 xl:mr-4 lg:mr-4 md:mt-2 mr-4`}
+              styleSpacing={`mr-4`}
               type="GitHub"
               onPressed={() => {}}
             />
             <SocialIcon
               styleClasses={`w-8 h-8`}
-              styleSpacing={`2xl:mr-4 xl:mr-4 lg:mr-4 md:mt-2 mr-4`}
+              styleSpacing={`mr-4`}
               type="Behance"
               onPressed={() => {}}
             />
@@ -57,7 +59,7 @@ const Hero = ({ sectionID, children }) => {
           </div>
         </div>
 
-        <div className={`w-2/5`}>
+        <div className={`md:w-1/2 w-full md:pb-0 mb-10`}>
           <HeroImage imageSrc={image} />
         </div>
       </div>
