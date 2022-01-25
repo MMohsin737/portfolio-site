@@ -14,7 +14,8 @@ import classes from "./Education.module.css";
 
 const Education = ({ sectionID }) => {
   return (
-    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
       <SectionHeading title="Education" />
 
       <div
