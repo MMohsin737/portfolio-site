@@ -12,16 +12,19 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(5, 227, 190, 0.35);
+  /* background: rgba(5, 227, 190, 0.35); */
+  background: transparent;
 }
 
 /* Handle */

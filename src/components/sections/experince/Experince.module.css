@@ -1,12 +1,9 @@
-.mt-bottom-140 {
-  margin-bottom: 140px;
+.height320 {
+  height: 320px;
 }
 
-.my-140 {
-  margin-top: 140px;
-  margin-bottom: 140px;
-}
-
-.mt-bottom-90 {
-  margin-bottom: 90px;
+@media screen and (max-width: 600px) {
+  .respDate {
+    display: none;
+  }
 }

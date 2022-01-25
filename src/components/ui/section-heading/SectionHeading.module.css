@@ -7,3 +7,9 @@
 .letterSpacing10 {
   letter-spacing: 10px;
 }
+
+@media screen and (max-width: 350px) {
+  .letterSpacing10 {
+    letter-spacing: 3px;
+  }
+}

@@ -42,15 +42,15 @@ const ToolsTechnologies = ({ sectionID }) => {
   ];
 
   return (
-    <div id={sectionID} className={`mt-14 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
       <SectionHeading title="Technologies" subtitle="" />
 
-      <div className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}>
+      <div className={`mx-auto w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}>
         {/* Design Icons */}
-        <div className={`flex-1`}>
+        <div className={`flex-1 md:w-4/5 w-full`}>
           <h6 className={`uppercase text-white text-3xl text-center font-light`}>Design</h6>
 
-          <div className={`mt-5 w-4/5 mx-auto grid grid-cols-5 gap-1`}>
+          <div className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1`}>
             {designIcons.map((item, index) => {
               if (index === 0) {
                 return (
@@ -75,10 +75,10 @@ const ToolsTechnologies = ({ sectionID }) => {
         />
 
         {/* Development Icons */}
-        <div className={`flex-1`}>
+        <div className={`flex-1 md:w-4/5 w-full md:mt-0 mt-8`}>
           <h6 className={`uppercase text-white text-3xl text-center font-light`}>Development</h6>
 
-          <div className={`mt-5 w-4/5 mx-auto grid grid-cols-5 gap-1`}>
+          <div className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1`}>
             {developmentIcons.map((item, index) => {
               return (
                 <div className={`w-14 mx-auto my-5`}>

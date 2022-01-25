@@ -14,26 +14,17 @@ import classes from "./Education.module.css";
 
 const Education = ({ sectionID }) => {
   return (
-    <div
-      id={sectionID}
-      className={`mt-24 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
-    >
+    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
       <SectionHeading title="Education" />
 
       <div
-        className={`w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start ${classes["height-360px"]}`}
+        className={`w-full flex lg:flex-row flex-col justify-center items-start lg:mb-0 mb-60 ${classes["height-360px"]}`}
       >
         {/* Academic */}
-        <div className={`flex-1 flex flex-col`}>
-          <h6
-            className={`uppercase text-white text-3xl text-center font-light`}
-          >
-            Academic
-          </h6>
+        <div className={`flex-1 flex flex-col lg:w-full md:w-4/5 w-full mx-auto`}>
+          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Academic</h6>
 
-          <div
-            className={`mt-14 h-full flex-1 flex flex-col justify-between items-center`}
-          >
+          <div className={`mt-14 h-full flex-1 flex flex-col justify-between items-center`}>
             <EducationCard
               cardType="academic"
               icon={szabistIcon}
@@ -60,20 +51,14 @@ const Education = ({ sectionID }) => {
 
         <SectionDivider
           dividerHeight={`my-auto`}
-          customStyle={`xl:block lg:block md:block hidden ${classes["height-250px"]}`}
+          customStyle={`xl:block lg:block lg:block hidden ${classes["height-250px"]}`}
         />
 
         {/* Certificates */}
-        <div className={`flex-1 relative`}>
-          <h6
-            className={`uppercase text-white text-3xl text-center font-light`}
-          >
-            Certificates
-          </h6>
+        <div className={`flex-1 flex flex-col lg:w-full md:w-4/5 w-full mx-auto lg:mt-0 mt-44`}>
+          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Certificates</h6>
 
-          <div
-            className={`mt-14 h-full flex-1 flex flex-col justify-between items-center`}
-          >
+          <div className={`mt-14 h-full flex-1 flex flex-col justify-between items-center `}>
             <EducationCard
               cardType="certificate"
               icon={udemyIcon}

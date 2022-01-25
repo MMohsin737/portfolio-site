@@ -16,63 +16,42 @@ const Portfolio = ({ sectionID }) => {
 
   const myProjets = [
     {
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1d713d130524295.6182155b6fcc5.png",
+      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1d713d130524295.6182155b6fcc5.png",
       liveLink: "https://elysiumsols.com/",
-      designLink:
-        "https://www.behance.net/gallery/130524295/Tech-Company-Landing-Page",
+      designLink: "https://www.behance.net/gallery/130524295/Tech-Company-Landing-Page",
     },
     {
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/790204105463953.5f79fa2d86990.png",
+      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/790204105463953.5f79fa2d86990.png",
       liveLink: "",
-      designLink:
-        "https://www.behance.net/gallery/105463953/Exchange-Rate-Mobile-Application",
+      designLink: "https://www.behance.net/gallery/105463953/Exchange-Rate-Mobile-Application",
     },
     {
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7654f997051517.5ebc366a7af14.png",
+      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7654f997051517.5ebc366a7af14.png",
       liveLink: "",
-      designLink:
-        "https://www.behance.net/gallery/97051517/Professional-Training-Providing-Firm-Landing-Page",
+      designLink: "https://www.behance.net/gallery/97051517/Professional-Training-Providing-Firm-Landing-Page",
     },
     {
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3d208796994401.5ebb01972aab1.png",
+      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3d208796994401.5ebb01972aab1.png",
       liveLink: "",
-      designLink:
-        "https://www.behance.net/gallery/96994401/Landing-Page-%28eBookGuard%29",
+      designLink: "https://www.behance.net/gallery/96994401/Landing-Page-%28eBookGuard%29",
     },
     {
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/effca596175207.5ea871aeb504c.png",
+      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/effca596175207.5ea871aeb504c.png",
       liveLink: "",
-      designLink:
-        "https://www.behance.net/gallery/96175207/Crtic-%28Design-Work-Review-Site%29",
+      designLink: "https://www.behance.net/gallery/96175207/Crtic-%28Design-Work-Review-Site%29",
     },
   ];
 
   const scaleImg = "scale-125";
 
   return (
-    <div
-      id={sectionID}
-      className={`mt-14 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
-    >
+    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
       <SectionHeading title="Portfolio" />
 
       <div className={`w-full grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5`}>
         {myProjets.map((item, index) => (
-          <div
-            className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}
-          >
-            <img
-              className={`w-full h-auto object-fill ${
-                index === 1 && scaleImg
-              }`}
-              src={item.thumbnail}
-              alt=""
-            />
+          <div className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}>
+            <img className={`w-full h-auto object-fill ${index === 1 && scaleImg}`} src={item.thumbnail} alt="" />
             <div className={`${classes.hoverBackdrop}`}>
               <div className={`${classes.hoverDiv}`}>
                 <a
@@ -84,9 +63,7 @@ const Portfolio = ({ sectionID }) => {
                   View Design
                 </a>
 
-                {item.liveLink !== "" && (
-                  <div className={`${classes.lineDivider}`}></div>
-                )}
+                {item.liveLink !== "" && <div className={`${classes.lineDivider}`}></div>}
 
                 {item.liveLink !== "" && (
                   <a

@@ -11,14 +11,12 @@ import overrootLogo from "../../../assets/images/overroot-logo.png";
 import classes from "./Experince.module.css";
 
 const Experince = ({ sectionID }) => {
+
   return (
-    <div
-      id={sectionID}
-      className={`mt-24 mx-auto xl:w-7/12 lg:w-4/5 md:w-11/12 w-full px-5`}
-    >
+    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
       <SectionHeading title="Experince" />
 
-      <div className={`flex flex-row justify-center`}>
+      <div className={`flex md:flex-row flex-col items-center justify-center`}>
         <div className={`flex flex-col`}>
           <CompanyExpCard
             imgSrc={cipherSavvyLogo}
@@ -30,27 +28,17 @@ const Experince = ({ sectionID }) => {
             spacingStyle={``}
           />
 
-          <div className={`flex-grow flex justify-end`}>
-            <span
-              className={`block mt-auto text-lg text-gray-500 font-medium  ${classes["mt-bottom-140"]}`}
-            >
-              2018
-            </span>
+          <div className={`flex justify-end items-center ${classes.height320} ${classes.respDate}`}>
+            <span className={`block h-fit w-fit text-lg text-gray-500 font-medium `}>2018</span>
           </div>
         </div>
 
         {/* Divider */}
-        <TimelineDivider barHeight="large" />
+        {window.screen.width > 600 && <TimelineDivider />}
 
-        <div className={`flex flex-col h-max`}>
-          <div
-            className={`flex-grow flex justify-start items-start ${classes["mt-bottom-90"]}`}
-          >
-            <span
-              className={`block mt-auto text-lg text-gray-500 font-medium mb-2 ${classes["my-140"]}`}
-            >
-              2022
-            </span>
+        <div className={`flex flex-col h-max md:mt-0 mt-8`}>
+          <div className={`flex justify-start items-center ${classes.height320} ${classes.respDate}`}>
+            <span className={`block h-fit w-fit text-lg text-gray-500 font-medium mb-2`}>2022</span>
           </div>
           <CompanyExpCard
             imgSrc={overrootLogo}

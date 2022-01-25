@@ -149,7 +149,7 @@ const EducationCard = ({
 
   return (
     <div
-      className={`w-5/6 ${classes["flip-card"]} ${customSpacing} notSelectable`}
+      className={`md:w-5/6 w-full ${classes["flip-card"]} ${customSpacing} notSelectable`}
     >
       {cardFront}
       {cardBack}

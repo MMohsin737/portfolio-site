@@ -12,7 +12,7 @@ const Hero = ({ sectionID, children }) => {
   return (
     <div
       id={sectionID}
-      className={`flex flex-col px-4 py-10 mx-auto 2xl:container xl:container lg:container md:container container items-center`}
+      className={`flex flex-col mt-12 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5 items-center`}
     >
       <div className={`w-full`}>{children}</div>
 
@@ -23,29 +23,29 @@ const Hero = ({ sectionID, children }) => {
           <HeroTextConent />
 
           <div
-            className={`flex flex-row w-full md:justify-start justify-center mt-3`}
+            className={`flex flex-row w-full md:justify-start justify-center mb-8`}
           >
             <SocialIcon
               styleClasses={`w-8 h-8`}
-              styleSpacing={`mr-4`}
+              styleSpacing={`mr-3`}
               type="LinkedIn"
               onPressed={() => {}}
             />
             <SocialIcon
               styleClasses={`w-8 h-8`}
-              styleSpacing={`mr-4`}
+              styleSpacing={`mr-3`}
               type="GitHub"
               onPressed={() => {}}
             />
             <SocialIcon
               styleClasses={`w-8 h-8`}
-              styleSpacing={`mr-4`}
+              styleSpacing={``}
               type="Behance"
               onPressed={() => {}}
             />
           </div>
 
-          <div className={`flex flex-row justify-between mt-6`}>
+          <div className={`flex flex-row w-full md:justify-start justify-center`}>
             <CtaBtnV1
               title="See My Work"
               customStyle={`mr-5 2xl:text-xl xl:text-xl lg:text-xl text-sm`}
@@ -60,11 +60,11 @@ const Hero = ({ sectionID, children }) => {
         </div>
 
         <div className={`md:w-1/2 w-full md:pb-0 mb-10`}>
-          <HeroImage imageSrc={image} />
+          <HeroImage imageSrc="" />
         </div>
       </div>
 
-      <HeroScrollDownButton />
+      {/* <HeroScrollDownButton /> */}
     </div>
   );
 };
