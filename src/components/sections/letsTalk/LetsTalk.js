@@ -36,7 +36,7 @@ const LetsTalk = ({ sectionID }) => {
         <h1 className={`uppercase text-6xl font-light text-center mt-24 ${classes.letterSpace3}`}>Thank You</h1>
 
         <div>
-          <p className={`text-xs text-center uppercase mt-32`}>Made with ❤️ by Muhammad Mohsin ©️ 2022 All Right Reserved.</p>
+          <p className={`text-xs text-center uppercase mt-32 mb-3`}>Made with ❤️ by Muhammad Mohsin ©️ 2022 All Right Reserved.</p>
         </div>
       </div>
     </div>

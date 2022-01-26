@@ -20,10 +20,10 @@ const Hero = ({ sectionID, children }) => {
     >
       <div className={`w-full`}>{children}</div>
 
-      <div className={`w-full mt-10 h-full flex md:flex-row flex-col-reverse justify-between items-center`}>
-        <div
-          className={`flex-1 flex flex-col justify-center items-start`}
-        >
+      <div
+        className={`w-full mt-10 h-full flex md:flex-row flex-col-reverse justify-between items-center`}
+      >
+        <div className={`flex-1 flex flex-col justify-center items-start`}>
           <HeroTextConent />
 
           <div
@@ -49,7 +49,9 @@ const Hero = ({ sectionID, children }) => {
             />
           </div>
 
-          <div className={`flex flex-row w-full md:justify-start justify-center`}>
+          <div
+            className={`flex flex-row w-full md:justify-start justify-center`}
+          >
             <CtaBtnV1
               title="See My Work"
               customStyle={`mr-5 2xl:text-xl xl:text-xl lg:text-xl text-sm`}
@@ -64,7 +66,9 @@ const Hero = ({ sectionID, children }) => {
         </div>
 
         <div className={`md:w-1/2 w-full md:pb-0 mb-10`}>
-          <HeroImage imageSrc="" />
+          <div className={`w-4/6 ml-auto`}>
+            <HeroImage imageSrc={image} />
+          </div>
         </div>
       </div>
 

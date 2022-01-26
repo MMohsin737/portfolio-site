@@ -28,13 +28,14 @@ const AboutMe = ({ sectionID }) => {
           className={`md:w-1/2 w-full flex flex-col justify-center items-start font-light text-justify md:ml-5 ml-0`}
         >
           <p className={`text-lg leading-8 text-white`}>
-            I possess a positive “can-do” attitude where I am able to walk the
-            extra mile in order to get the job done. I am also creative and
-            self-motivated, where I am able to work efficiently and effectively
-            at work. Opportunity that will allow me to utilize my
-            problem-solving skills and attention to detail will help me in
-            further development of my abilities in the field of Computer
-            Science.
+            Innovative Front End Developer with 2 years experience building and
+            maintaining responsive websites in the recruiting industry.
+            Proficient in HTML, CSS, JavaScript, Dart, React and Flutter; plus
+            modern libraries and frameworks. Passionate about usability and
+            possess working knowledge of Adobe Photoshop & Figma. Experience has
+            taught me to take accessibility and responsiveness seriously. I
+            possess a positive “can-do” attitude where I am able to walk the
+            extra mile in order to get the job done.
           </p>
 
           <CtaBtnV2
