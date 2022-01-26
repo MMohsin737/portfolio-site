@@ -45,8 +45,9 @@ const Portfolio = ({ sectionID }) => {
   const scaleImg = "scale-125";
 
   return (
-    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
-      <SectionHeading title="Portfolio" />
+    // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
+    <SectionHeading title="Portfolio" />
 
       <div className={`w-full grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5`}>
         {myProjets.map((item, index) => (

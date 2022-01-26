@@ -14,11 +14,12 @@ import classes from "./Education.module.css";
 
 const Education = ({ sectionID }) => {
   return (
-    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
       <SectionHeading title="Education" />
 
       <div
-        className={`w-full flex lg:flex-row flex-col justify-center items-start lg:mb-0 mb-60 ${classes["height-360px"]}`}
+        className={`w-full flex lg:flex-row flex-col justify-center items-start lg:mb-0 mb-96 ${classes["height-360px"]}`}
       >
         {/* Academic */}
         <div className={`flex-1 flex flex-col lg:w-full md:w-4/5 w-full mx-auto`}>

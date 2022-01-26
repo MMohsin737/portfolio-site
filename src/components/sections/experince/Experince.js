@@ -13,7 +13,8 @@ import classes from "./Experince.module.css";
 const Experince = ({ sectionID }) => {
 
   return (
-    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
       <SectionHeading title="Experince" />
 
       <div className={`flex md:flex-row flex-col items-center justify-center`}>

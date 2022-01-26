@@ -35,5 +35,10 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primaryColor);;
+  background: var(--primaryColor);
+}
+
+::selection {
+  background: var(--primaryColor);
+  color: var(--darkColor);
 }

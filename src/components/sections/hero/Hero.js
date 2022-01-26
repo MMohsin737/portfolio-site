@@ -10,9 +10,13 @@ import image from "../../../assets/images/hero-image.png";
 
 const Hero = ({ sectionID, children }) => {
   return (
+    // <div
+    //   id={sectionID}
+    //   className={`flex flex-col mt-12 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5 items-center`}
+    // >
     <div
       id={sectionID}
-      className={`flex flex-col mt-12 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5 items-center`}
+      className={`flex flex-col mt-12 mx-auto md:container container px-5 items-center`}
     >
       <div className={`w-full`}>{children}</div>
 

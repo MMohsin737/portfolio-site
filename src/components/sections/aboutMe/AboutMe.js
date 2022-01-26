@@ -7,7 +7,8 @@ import aboutMeImage from "../../../assets/images/about-me-image.png";
 
 const AboutMe = ({ sectionID }) => {
   return (
-    <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
       <SectionHeading title="About Me" />
 
       <div className={`w-full flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col`}>
