@@ -15,7 +15,7 @@ import classes from "./Education.module.css";
 const Education = ({ sectionID }) => {
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
-    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}>
       <SectionHeading title="Education" />
 
       <div
@@ -23,7 +23,7 @@ const Education = ({ sectionID }) => {
       >
         {/* Academic */}
         <div className={`flex-1 flex flex-col lg:w-full md:w-4/5 w-full mx-auto`}>
-          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Academic</h6>
+          <h6 className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}>Academic</h6>
 
           <div className={`mt-14 h-full flex-1 flex flex-col justify-between items-center`}>
             <EducationCard
@@ -57,7 +57,7 @@ const Education = ({ sectionID }) => {
 
         {/* Certificates */}
         <div className={`flex-1 flex flex-col lg:w-full md:w-4/5 w-full mx-auto lg:mt-0 mt-44`}>
-          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Certificates</h6>
+          <h6 className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}>Certificates</h6>
 
           <div className={`mt-14 h-full flex-1 flex flex-col justify-between items-center `}>
             <EducationCard

@@ -2,7 +2,9 @@
   /* --primaryColor: #6ccb94; */
   /* --primaryColor: #f5f5f5; */
   --primaryColor: #05e3be;
+  --primaryColorTransulsant: rgba(5, 227, 190, 0.4);
   --darkColor: #141628;
+  --darkColorTransulsant: rgba(20, 22, 40, 0.5);
 
   /* LinkedIn */
   --blueLinear: linear-gradient(180deg, #137fea, #0a66c2);

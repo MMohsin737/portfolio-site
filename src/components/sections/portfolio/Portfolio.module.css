@@ -1,6 +1,6 @@
 @import url("../../../theme/siteColors.css");
 
-.parentHover{
+.parentHover {
   height: 300px;
 }
 
@@ -9,13 +9,13 @@
 }
 
 .lineDivider {
-  height: 80%;
-  width: 1px;
-  background-color: var(--darkColor);
+  height: 25px;
+  width: 2px;
+  background-color: var(--primaryColor);
   opacity: 0.3;
 }
 
-.hoverBackdrop {
+/* .hoverBackdrop {
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -26,30 +26,55 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 20%,
     rgba(108, 203, 148, 0.1) 65%,
     rgba(108, 203, 148, 1) 100%
-  );
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: 350ms ease-out;
+  ); */
+/* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
+/* transition: 350ms ease-out; */
+/* }  */
+
+.mainContentDiv {
+  position: absolute;
+  z-index: 30;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  height: min-content;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  transform: translateY(35px);
+  transition: 450ms ease-out;
+  border-radius: 3px;
 }
 
 .hoverDiv {
-  position: absolute;
-  z-index: 30;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background-color: var(--darkColorTransulsant);
+  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
+  transition: 500ms ease-out;
+}
+
+.hoverDivTitle {
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.hoverDivBtns {
+  width: 100%;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 15%;
-  padding: 5px;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: 500ms ease-out;
 }
 
 .hoverDiv a {
@@ -68,14 +93,20 @@
 }
 
 .hoverDiv a:hover {
-  background-color: var(--darkColor);
-  color: #ffffff;
+  background-color: var(--primaryColor);
+  color: var(--darkColor);;
 }
 
 .parentHover:hover .hoverBackdrop {
   clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
 }
 
-.parentHover:hover .hoverDiv {
-  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+.parentHover:hover .mainContentDiv {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: translateY(0px);
+}
+
+.parentHover:hover .mainContentDiv .hoverDiv {
+  background-color: var(--darkColor);
+  transform: translateY(0%);
 }

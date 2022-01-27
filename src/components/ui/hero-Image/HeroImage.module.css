@@ -1,50 +1,95 @@
-/* .pulse {
-  margin: 100px;
-  display: block;
+@import url("../../../theme/siteColors.css");
+
+.outlineBoxTop,
+.outlineBoxBottom {
   position: absolute;
-  bottom: 8.5vh;
-  width: 23vw;
-  height: 48vh;
+  height: 40%;
+  width: 40%;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.outlineBoxTop {
+  top: -6%;
+  right: -3%;
+  border-top: 5px solid var(--primaryColor);
+  border-right: 5px solid var(--primaryColor);
+}
+
+.outlineBoxBottom {
+  left: -3%;
+  bottom: -6%;
+  border-left: 5px solid var(--primaryColor);
+  border-bottom: 5px solid var(--primaryColor);
+}
+
+.boxTop,
+.boxBottom {
+  height: 100px;
+  width: 100px;
+  border-radius: 2px;
+  background-color: var(--primaryColor);
+  position: absolute;
+  /* transition: all 1s ease-out; */
   z-index: -1;
-  border-radius: 100%;
-  background: transparent;
-  box-shadow: 0 0 0 rgba(108, 203, 148, 0.6);
-  animation: pulse 1.5s infinite;
 }
 
-.pulse:hover {
-  animation: none;
+.boxTop {
+  top: -6%;
+  left: 30%;
+  animation-timing-function: ease-out;
+  animation: topDivMovement 10s infinite;
 }
 
-@-webkit-keyframes pulse {
+.boxBottom {
+  right: 30%;
+  bottom: -6%;
+  animation-timing-function: ease-out;
+  animation: bottomDivMovement 10s infinite;
+}
+
+@keyframes topDivMovement {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(108, 203, 148, 0.6);
+    top: -6%;
+    left: 30%;
   }
-  70% {
-    -webkit-box-shadow: 0 0 0 30px rgba(108, 203, 148, 0);
+  25% {
+    top: -6%;
+    left: -3%;
+  }
+  50% {
+    top: 35%;
+    left: -3%;
+  }
+  75% {
+    top: -6%;
+    left: -3%;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(108, 203, 148, 0);
+    top: -6%;
+    left: 30%;
   }
 }
 
-@keyframes pulse {
+@keyframes bottomDivMovement {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(108, 203, 148, 0.6);
-    box-shadow: 0 0 0 0 rgba(108, 203, 148, 0.6);
+    right: 30%;
+    bottom: -6%;
   }
-  70% {
-    -moz-box-shadow: 0 0 0 30px rgba(108, 203, 148, 0);
-    box-shadow: 0 0 0 30px rgba(108, 203, 148, 0);
+  25% {
+    right: -3%;
+    bottom: -6%;
+  }
+  50% {
+    right: -3%;
+    bottom: 35%;
+  }
+  75% {
+    right: -3%;
+    bottom: -6%;
   }
   100% {
-    -moz-box-shadow: 0 0 0 0 rgba(108, 203, 148, 0);
-    box-shadow: 0 0 0 0 rgba(108, 203, 148, 0);
+    right: 30%;
+    bottom: -6%;
   }
-} */
-
-/* @media screen and (min-width: 1900px) {
-  .pulse {
-    bottom: calc(100% - 94.6%);
-  }
-} */
+}

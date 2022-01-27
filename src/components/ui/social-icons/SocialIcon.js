@@ -6,7 +6,7 @@ import linkedInIcon from "../../../assets/images/linkedIn-icon.svg";
 import gitHubIcon from "../../../assets/images/github-icon.svg";
 import behanceIcon from "../../../assets/images/behance-icon.svg";
 
-const SocialIcon = ({ styleClasses, styleSpacing, type, onPressed }) => {
+const SocialIcon = ({ styleClasses, styleSpacing, type, linkToProfile }) => {
   const icon = {
     linkedin: linkedInIcon,
     github: gitHubIcon,
@@ -31,30 +31,20 @@ const SocialIcon = ({ styleClasses, styleSpacing, type, onPressed }) => {
     behance: classes.behanceIcoBG,
   };
 
+  const btnType = type.toLowerCase();
+
   return (
-    <button
-      onClick={onPressed}
-      className={`flex flex-row items-center relative ${
-        btnHover[type.toLowerCase()]
-      } ${btnBG[type.toLowerCase()]} ${classes.rightRound} ${styleSpacing}`}
+    <a
+      href={linkToProfile}
+      target="_blank"
+      rel="noreferrer"
+      className={`flex flex-row items-center relative ${classes.btn} ${btnHover[btnType]} ${btnBG[btnType]} ${classes.rightRound} ${styleSpacing}`}
     >
-      <div
-        className={`${styleClasses} p-1 mr-2 ${iconBG[type.toLowerCase()]} ${
-          classes.leftRound
-        }`}
-      >
-        <img
-          className={`w-full h-full object-contain`}
-          src={icon[type.toLowerCase()]}
-          alt={type.toLowerCase()}
-        />
+      <div className={`${styleClasses} p-1 mr-2 ${iconBG[btnType]} ${classes.leftRound}`}>
+        <img className={`w-full h-full object-contain`} src={icon[btnType]} alt={btnType} />
       </div>
-      <span
-        className={`mr-2 font-medium text-sm uppercase mb-0 text-white ${classes.lineHzero}`}
-      >
-        {type}
-      </span>
-    </button>
+      <span className={`mr-2 font-medium text-sm uppercase mb-0 text-white ${classes.lineHzero}`}>{type}</span>
+    </a>
   );
 };
 

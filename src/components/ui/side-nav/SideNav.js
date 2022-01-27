@@ -3,6 +3,8 @@ import classes from "./SideNav.module.css";
 
 const SideNav = ({ onPressed }) => {
   const closeNav = () => {
+    const body = document.getElementsByTagName("BODY")[0];
+    body.style.overflowY = "auto";
     document.getElementById("mySidenav").style.width = "0";
   };
 

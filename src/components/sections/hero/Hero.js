@@ -2,7 +2,7 @@
 import HeroImage from "../../ui/hero-Image/HeroImage";
 import SocialIcon from "../../ui/social-icons/SocialIcon";
 import HeroTextConent from "../../ui/hero-text-content/HeroTextContent";
-import HeroScrollDownButton from "../../ui/hero-scroll-down-btn/HeroScrollDownButton";
+// import HeroScrollDownButton from "../../ui/hero-scroll-down-btn/HeroScrollDownButton";
 import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
 
 // Image
@@ -14,59 +14,42 @@ const Hero = ({ sectionID, children }) => {
     //   id={sectionID}
     //   className={`flex flex-col mt-12 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5 items-center`}
     // >
-    <div
-      id={sectionID}
-      className={`flex flex-col mt-12 mx-auto md:container container px-5 items-center`}
-    >
-      <div className={`w-full`}>{children}</div>
+    <div id={sectionID} className={`flex flex-col mt-12 mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}>
+      <div className={`w-full mb-10`}>{children}</div>
 
-      <div
-        className={`w-full mt-10 h-full flex md:flex-row flex-col-reverse justify-between items-center`}
-      >
+      <div className={`w-full mt-10 h-full flex lg:flex-row flex-col-reverse justify-between items-center`}>
         <div className={`flex-1 flex flex-col justify-center items-start`}>
           <HeroTextConent />
 
-          <div
-            className={`flex flex-row w-full md:justify-start justify-center mb-8`}
-          >
+          <div className={`flex flex-row w-full lg:justify-start justify-center mb-8`}>
             <SocialIcon
               styleClasses={`w-8 h-8`}
               styleSpacing={`mr-3`}
               type="LinkedIn"
-              onPressed={() => {}}
+              linkToProfile={"https://www.linkedin.com/in/muhammad-mohsin-166112159/"}
             />
             <SocialIcon
               styleClasses={`w-8 h-8`}
               styleSpacing={`mr-3`}
               type="GitHub"
-              onPressed={() => {}}
+              linkToProfile={"https://github.com/MMohsin737"}
             />
             <SocialIcon
               styleClasses={`w-8 h-8`}
               styleSpacing={``}
               type="Behance"
-              onPressed={() => {}}
+              linkToProfile={"https://www.behance.net/muhammadmohsin6"}
             />
           </div>
 
-          <div
-            className={`flex flex-row w-full md:justify-start justify-center`}
-          >
-            <CtaBtnV1
-              title="See My Work"
-              customStyle={`mr-5 2xl:text-xl xl:text-xl lg:text-xl text-sm`}
-              onPressed={() => {}}
-            />
-            <CtaBtnV1
-              title="Lets's Talk"
-              customStyle={`2xl:text-xl xl:text-xl lg:text-xl text-sm`}
-              onPressed={() => {}}
-            />
+          <div className={`flex flex-row w-full lg:justify-start justify-center p-3`}>
+            <CtaBtnV1 title="See My Work" customStyle={`mr-9`} onPressed={() => {}} />
+            <CtaBtnV1 title="Lets's Talk" customStyle={``} onPressed={() => {}} />
           </div>
         </div>
 
-        <div className={`md:w-1/2 w-full md:pb-0 mb-10`}>
-          <div className={`w-4/6 ml-auto`}>
+        <div className={`md:w-1/2 w-full lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}>
+          <div className={`lg:w-4/6 w-full lg:ml-auto`}>
             <HeroImage imageSrc={image} />
           </div>
         </div>

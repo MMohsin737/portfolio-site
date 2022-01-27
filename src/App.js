@@ -17,7 +17,7 @@ import SideNav from "./components/ui/side-nav/SideNav";
 function App() {
   return (
     <Fragment>
-      <SideNav />
+      <SideNav onPressed={() => {}} />
 
       <Hero sectionID="hero">
         <Nav />

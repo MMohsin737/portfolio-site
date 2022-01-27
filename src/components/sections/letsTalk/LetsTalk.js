@@ -11,7 +11,7 @@ const LetsTalk = ({ sectionID }) => {
     //   id={sectionID}
     //   className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}
     // ></div>
-    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}>
       <SectionHeading title="Let's Talk" />
 
       <div className={`mt-14 text-white mx-auto font-light`}>
@@ -28,15 +28,32 @@ const LetsTalk = ({ sectionID }) => {
         </h4>
 
         <div className={`flex flex-row mx-auto md:justify-center justify-center mb-8 mt-5`}>
-          <SocialIcon styleClasses={`w-8 h-8`} styleSpacing={`mr-3`} type="LinkedIn" onPressed={() => {}} />
-          <SocialIcon styleClasses={`w-8 h-8`} styleSpacing={`mr-3`} type="GitHub" onPressed={() => {}} />
-          <SocialIcon styleClasses={`w-8 h-8`} styleSpacing={``} type="Behance" onPressed={() => {}} />
+          <SocialIcon
+            styleClasses={`w-8 h-8`}
+            styleSpacing={`mr-3`}
+            type="LinkedIn"
+            linkToProfile={"https://www.linkedin.com/in/muhammad-mohsin-166112159/"}
+          />
+          <SocialIcon
+            styleClasses={`w-8 h-8`}
+            styleSpacing={`mr-3`}
+            type="GitHub"
+            linkToProfile={"https://github.com/MMohsin737"}
+          />
+          <SocialIcon
+            styleClasses={`w-8 h-8`}
+            styleSpacing={``}
+            type="Behance"
+            linkToProfile={"https://www.behance.net/muhammadmohsin6"}
+          />
         </div>
 
         <h1 className={`uppercase text-6xl font-light text-center mt-24 ${classes.letterSpace3}`}>Thank You</h1>
 
         <div>
-          <p className={`text-xs text-center uppercase mt-32 mb-3`}>Made with ❤️ by Muhammad Mohsin ©️ 2022 All Right Reserved.</p>
+          <p className={`${classes.rightsText} text-center uppercase mt-32 mb-3`}>
+            Made with ❤️ by Muhammad Mohsin ©️ 2022 All Right Reserved.
+          </p>
         </div>
       </div>
     </div>

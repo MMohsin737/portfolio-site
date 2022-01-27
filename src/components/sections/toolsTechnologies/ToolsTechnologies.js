@@ -43,13 +43,13 @@ const ToolsTechnologies = ({ sectionID }) => {
 
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
-    <div id={sectionID} className={`mt-28 mx-auto md:container container px-5`}>
+    <div id={sectionID} className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}>
       <SectionHeading title="Technologies" subtitle="" />
 
-      <div className={`mx-auto w-full flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-start`}>
+      <div className={`mx-auto w-full flex lg:flex-row flex-col justify-center lg:items-start items-center`}>
         {/* Design Icons */}
         <div className={`flex-1 md:w-4/5 w-full`}>
-          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Design</h6>
+          <h6 className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}>Design</h6>
 
           <div className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1`}>
             {designIcons.map((item, index) => {
@@ -72,12 +72,12 @@ const ToolsTechnologies = ({ sectionID }) => {
 
         <SectionDivider
           dividerHeight={`my-auto ${classes["height-260px"]}`}
-          customStyle={`xl:block lg:block md:block hidden`}
+          customStyle={`lg:block hidden`}
         />
 
         {/* Development Icons */}
-        <div className={`flex-1 md:w-4/5 w-full md:mt-0 mt-8`}>
-          <h6 className={`uppercase text-white text-3xl text-center font-light`}>Development</h6>
+        <div className={`flex-1 md:w-4/5 w-full lg:mt-0 mt-8`}>
+          <h6 className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}>Development</h6>
 
           <div className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1`}>
             {developmentIcons.map((item, index) => {

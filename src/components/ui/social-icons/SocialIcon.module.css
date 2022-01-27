@@ -1,5 +1,9 @@
 @import url("../../../theme/siteColors.css");
 
+.btn{
+  cursor: pointer;
+}
+
 .lineHzero {
   line-height: 0px;
 }
