@@ -47,8 +47,17 @@
 /* 3D Flip Animation */
 .flip-card {
   position: relative;
-  /* transition: transform 1.5s cubic-bezier(0.4, 0.2, 0.2, 1); */
+ 
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
+
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
   perspective: 1000px;
 }
 
@@ -56,13 +65,26 @@
 .flip-card-back {
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
-  /* perspective: 1000px; */
   z-index: 0;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -moz-transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -ms-transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .flip-card-front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
 
@@ -70,6 +92,11 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -88,19 +115,35 @@
 .flip-card-front .flip-card-inner,
 .flip-card-back .flip-card-inner {
   width: 100%;
-  /* padding: 40px; */
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) translateZ(60px) scale(0.94);
   z-index: 2;
+
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -moz-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -o-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .flip-card:hover .flip-card-front {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 
 .flip-card:hover .flip-card-back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }

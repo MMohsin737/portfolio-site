@@ -48,7 +48,7 @@ const Portfolio = ({ sectionID }) => {
 
       <div className={`w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5`}>
         {myProjets.map((item, index) => (
-          <div className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}>
+          <div key={index} className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}>
             <img className={`w-full h-auto object-fill ${index === 1 && scaleImg}`} src={item.thumbnail} alt="" />
             <div className={`${classes.mainContentDiv}`}>
               <div className={`${classes.hoverDiv}`}>

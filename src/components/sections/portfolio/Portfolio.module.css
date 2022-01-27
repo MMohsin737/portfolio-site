@@ -5,7 +5,7 @@
 }
 
 .roundBorder {
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .lineDivider {
@@ -14,27 +14,6 @@
   background-color: var(--primaryColor);
   opacity: 0.3;
 }
-
-/* .hoverBackdrop {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(108, 203, 148, 0.1) 65%,
-    rgba(108, 203, 148, 1) 100%
-  ); */
-/* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
-/* transition: 350ms ease-out; */
-/* }  */
 
 .mainContentDiv {
   position: absolute;
@@ -45,10 +24,25 @@
   padding: 5px;
   overflow: hidden;
   height: min-content;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-  transform: translateY(35px);
-  transition: 450ms ease-out;
   border-radius: 3px;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  -moz-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  -ms-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  -o-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+
+  -webkit-transform: translateY(35px);
+  -moz-transform: translateY(35px);
+  -ms-transform: translateY(35px);
+  -o-transform: translateY(35px);
+  transform: translateY(35px);
+
+  -webkit-transition: 450ms ease-out;
+  -moz-transition: 450ms ease-out;
+  -ms-transition: 450ms ease-out;
+  -o-transition: 450ms ease-out;
+  transition: 450ms ease-out;
 }
 
 .hoverDiv {
@@ -59,7 +53,11 @@
   width: 100%;
   padding: 5px;
   background-color: var(--darkColorTransulsant);
-  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
+  
+  -webkit-transition: 500ms ease-out;
+  -moz-transition: 500ms ease-out;
+  -ms-transition: 500ms ease-out;
+  -o-transition: 500ms ease-out;
   transition: 500ms ease-out;
 }
 
@@ -87,26 +85,43 @@
   align-items: center;
   font-weight: 400;
   text-transform: uppercase;
-  /* color: var(--darkColor); */
   color: #ffffff;
   border-radius: 3px;
 }
 
 .hoverDiv a:hover {
   background-color: var(--primaryColor);
-  color: var(--darkColor);;
+  color: var(--darkColor);
 }
 
 .parentHover:hover .hoverBackdrop {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  -moz-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  -ms-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  -o-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
   clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
 }
 
 .parentHover:hover .mainContentDiv {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
   transform: translateY(0px);
 }
 
 .parentHover:hover .mainContentDiv .hoverDiv {
   background-color: var(--darkColor);
+
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
   transform: translateY(0%);
 }

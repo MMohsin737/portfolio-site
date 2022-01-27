@@ -55,13 +55,13 @@ const ToolsTechnologies = ({ sectionID }) => {
             {designIcons.map((item, index) => {
               if (index === 0) {
                 return (
-                  <div className={`w-8 mx-auto my-5`}>
+                  <div key={index} className={`w-8 mx-auto my-5`}>
                     <img className={`w-full h-full object-contain`} src={item} alt="" />
                   </div>
                 );
               } else {
                 return (
-                  <div className={`w-14 mx-auto my-5`}>
+                  <div key={index} className={`w-14 mx-auto my-5`}>
                     <img className={`w-full h-full object-contain`} src={item} alt="" />
                   </div>
                 );
@@ -82,7 +82,7 @@ const ToolsTechnologies = ({ sectionID }) => {
           <div className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1`}>
             {developmentIcons.map((item, index) => {
               return (
-                <div className={`w-14 mx-auto my-5`}>
+                <div key={index} className={`w-14 mx-auto my-5`}>
                   <img className={`w-full h-full object-contain`} src={item} alt="" />
                 </div>
               );

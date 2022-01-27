@@ -2,7 +2,6 @@
 
 .mainBtnDiv {
   --color: var(--primaryColor);
-  /* --color: #ffffff; */
   position: relative;
   z-index: 1;
 }
@@ -18,7 +17,11 @@
   z-index: -5;
   border-top: 3px solid var(--color);
   border-left: 3px solid var(--color);
+
   -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -33,7 +36,11 @@
   z-index: -5;
   border-right: 3px solid var(--color);
   border-bottom: 3px solid var(--color);
+
   -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -50,10 +57,7 @@
 .mainBtnDiv .btnV1 {
   padding: 0.5em 1.2em;
   font-size: 16px;
-  /* background: #222222;
- color: #fff; */
- font-weight: 400;
-  /* background-color: #0b9182; */
+  font-weight: 400;
   background-color: var(--darkColor);
   color: #ffffff;
   border: none;
