@@ -1,8 +1,18 @@
 // Styling
 import classes from "./LoadingScreen.module.css";
 
+// Utils
+import { diableNAV } from "../../../utils/utils";
+
 const LoadingScreen = () => {
-  return <span className={`${classes.loader}`}></span>;
+  diableNAV();
+
+  return (
+    <div id="initialLoadingScreen" className={`${classes.backDropScreen}`}>
+      <span className={`${classes.loader}`}></span>
+      <h5 className={`${classes.loadingText}`}>Loading</h5>
+    </div>
+  );
 };
 
 export default LoadingScreen;

@@ -1,7 +1,6 @@
 @import url("../../../theme/siteColors.css");
 
-
-.iconBtn:hover > .btnIcon > div {
+.iconBtn > .btnIcon > div {
   width: 25px;
 
   -webkit-transform-style: preserve-3d;
@@ -10,11 +9,27 @@
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.iconBtn > .btnIcon > div::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+.iconBtn:hover > .btnIcon > div {
+  width: 25px;
+
+  -webkit-transform: rotateY(180deg) scale(0.9);
+  -moz-transform: rotateY(180deg) scale(0.9);
+  -ms-transform: rotateY(180deg) scale(0.9);
+  -o-transform: rotateY(180deg) scale(0.9);
+  transform: rotateY(180deg) scale(0.9);
 }
 
 .btnIcon {

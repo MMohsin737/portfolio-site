@@ -11,16 +11,27 @@ import Portfolio from "./components/sections/portfolio/Portfolio";
 import LetsTalk from "./components/sections/letsTalk/LetsTalk";
 
 // UI Widgets
+import LoadingScreen from "./components/ui/loading-screen/LoadingScreen";
 import Nav from "./components/ui/nav/nav";
 import SideNav from "./components/ui/side-nav/SideNav";
 
+// Utils
+import { openNav, closeNav, scrollTo, removeLoadingScreen } from "./utils/utils";
+
+// Styling
+import "./theme/utilities.css";
+
 function App() {
+  removeLoadingScreen();
+
   return (
     <Fragment>
-      <SideNav onPressed={() => {}} />
+      <LoadingScreen />
+
+      <SideNav onPressed={scrollTo} closeSidebar={closeNav} />
 
       <Hero sectionID="hero">
-        <Nav />
+        <Nav onMenuPressed={openNav} />
       </Hero>
 
       <AboutMe sectionID="aboutMe" />

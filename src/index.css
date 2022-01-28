@@ -5,6 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("./theme/siteColors.css");
 
+html {
+  /* transition: scroll 1s ease-out; */
+}
+
 body {
   background-color: #141628;
   margin: 0;

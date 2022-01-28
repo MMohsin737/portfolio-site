@@ -83,8 +83,16 @@ const Portfolio = ({ sectionID }) => {
       </div>
 
       <div className="w-full flex flex-row items-center justify-center mt-8">
-        <CtaBtnV1 title="More Designs" customStyle={`mr-9`} onPressed={() => {}} />
-        <CtaBtnV1 title="More Live Projets" customStyle={``} onPressed={() => {}} />
+        <CtaBtnV1
+          title="More Designs"
+          customStyle={`mr-9`}
+          onPressed={() => window.open("https://www.behance.net/muhammadmohsin6", "_blank").focus()}
+        />
+        <CtaBtnV1
+          title="More Live Projets"
+          customStyle={``}
+          onPressed={() => window.open("https://github.com/MMohsin737", "_blank").focus()}
+        />
       </div>
     </div>
   );

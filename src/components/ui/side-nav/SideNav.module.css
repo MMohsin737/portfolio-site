@@ -30,6 +30,8 @@
   font-size: 2.5em;
   color: #818181;
   display: block;
+  font-weight: 400;
+  text-transform: uppercase;
 
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -57,6 +59,19 @@
   transition: all 400ms;
 }
 
+.underLine {
+  width: 0%;
+  height: 2px;
+  margin-top: -10px;
+  background-color: var(--darkColor);
+
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+}
+
 .closebtn:hover {
   color: var(--darkColor);
 
@@ -71,6 +86,23 @@
   -ms-transform: rotateZ(180deg);
   -o-transform: rotateZ(180deg);
   transform: rotateZ(180deg);
+}
+
+.underline {
+  width: 0%;
+  height: 2px;
+  margin-top: -10px;
+  background-color: var(--darkColor);
+
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.menuButton:hover .underline {
+  width: 100%;
 }
 
 @media screen and (max-width: 750px) {

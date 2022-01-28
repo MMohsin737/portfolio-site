@@ -5,7 +5,7 @@ import SectionHeading from "../../ui/section-heading/SectionHeading";
 import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
 
 // Image
-import aboutMeImage from "../../../assets/images/about-me-image.png";
+import aboutMeImage from "../../../assets/images/about-me-image.svg";
 
 // File
 import Resume from "../../../assets/download/Muhammad_Mohsin.pdf";
@@ -39,7 +39,7 @@ const AboutMe = ({ sectionID }) => {
         className={`w-full flex 2xl:flex-row xl:flex-row lg:flex-row flex-col`}
       >
         <div className={`lg:w-1/2 w-full  lg:mb-0 mb-6`}>
-          <div className={`w-9/12 mx-auto`}>
+          <div className={`w-11/12 mx-auto`}>
             <img
               className={`w-full h-full object-contain`}
               src={aboutMeImage}

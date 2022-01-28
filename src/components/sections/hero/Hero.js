@@ -2,8 +2,10 @@
 import HeroImage from "../../ui/hero-Image/HeroImage";
 import SocialIcon from "../../ui/social-icons/SocialIcon";
 import HeroTextConent from "../../ui/hero-text-content/HeroTextContent";
-// import HeroScrollDownButton from "../../ui/hero-scroll-down-btn/HeroScrollDownButton";
 import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
+
+// Utils
+import { scrollTo } from "../../../utils/utils";
 
 // Image
 import image from "../../../assets/images/hero-image.png";
@@ -43,8 +45,8 @@ const Hero = ({ sectionID, children }) => {
           </div>
 
           <div className={`flex flex-row w-full lg:justify-start justify-center p-3`}>
-            <CtaBtnV1 title="See My Work" customStyle={`mr-9`} onPressed={() => {}} />
-            <CtaBtnV1 title="Lets's Talk" customStyle={``} onPressed={() => {}} />
+            <CtaBtnV1 title="See My Work" customStyle={`mr-9`} onPressed={() => scrollTo("portfolio")} />
+            <CtaBtnV1 title="Lets's Talk" customStyle={``} onPressed={() => scrollTo("letsTalk")} />
           </div>
         </div>
 
