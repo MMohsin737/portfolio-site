@@ -1,5 +1,9 @@
 @import url("../../../theme/siteColors.css");
 
+.enlarge {
+  transform: scale(1.4);
+}
+
 .parentHover {
   height: 300px;
 }
@@ -125,3 +129,27 @@
   -o-transform: translateY(0px);
   transform: translateY(0%);
 }
+
+@media screen and (max-width: 1440px) {
+  .maxheightFitContent {
+    max-height: 230px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .maxheightFitContent {
+    max-height: 180px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .maxheightFitContent {
+    max-height: 300px;
+  }
+}
+
+/* @media screen and (max-width: 650px) {
+  .maxheightFitContent {
+    max-height: 300%;
+  }
+} */

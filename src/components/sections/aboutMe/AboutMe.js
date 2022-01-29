@@ -1,7 +1,5 @@
 // UI Widgets
 import SectionHeading from "../../ui/section-heading/SectionHeading";
-
-// import CtaBtnV2 from "../../ui/cta-btn-v2/CtaBtnV2";
 import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
 
 // Image

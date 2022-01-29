@@ -9,47 +9,69 @@ const Portfolio = ({ sectionID }) => {
   const myProjets = [
     {
       name: "Elysium Sols",
-      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1d713d130524295.6182155b6fcc5.png",
+      thumbnail:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1d713d130524295.6182155b6fcc5.png",
       liveLink: "https://elysiumsols.com/",
-      designLink: "https://www.behance.net/gallery/130524295/Tech-Company-Landing-Page",
+      designLink:
+        "https://www.behance.net/gallery/130524295/Tech-Company-Landing-Page",
     },
     {
       name: "Exhange Rate App",
-      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/790204105463953.5f79fa2d86990.png",
+      thumbnail:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/790204105463953.5f79fa2d86990.png",
       liveLink: "",
-      designLink: "https://www.behance.net/gallery/105463953/Exchange-Rate-Mobile-Application",
+      designLink:
+        "https://www.behance.net/gallery/105463953/Exchange-Rate-Mobile-Application",
     },
     {
       name: "Swift Traning",
-      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7654f997051517.5ebc366a7af14.png",
+      thumbnail:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7654f997051517.5ebc366a7af14.png",
       liveLink: "",
-      designLink: "https://www.behance.net/gallery/97051517/Professional-Training-Providing-Firm-Landing-Page",
+      designLink:
+        "https://www.behance.net/gallery/97051517/Professional-Training-Providing-Firm-Landing-Page",
     },
     {
       name: "E-Book Guard",
-      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3d208796994401.5ebb01972aab1.png",
+      thumbnail:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3d208796994401.5ebb01972aab1.png",
       liveLink: "",
-      designLink: "https://www.behance.net/gallery/96994401/Landing-Page-%28eBookGuard%29",
+      designLink:
+        "https://www.behance.net/gallery/96994401/Landing-Page-%28eBookGuard%29",
     },
     {
       name: "Critic",
-      thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/effca596175207.5ea871aeb504c.png",
+      thumbnail:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/effca596175207.5ea871aeb504c.png",
       liveLink: "",
-      designLink: "https://www.behance.net/gallery/96175207/Crtic-%28Design-Work-Review-Site%29",
+      designLink:
+        "https://www.behance.net/gallery/96175207/Crtic-%28Design-Work-Review-Site%29",
     },
   ];
 
-  const scaleImg = "scale-125";
+  const scaleImg = classes.enlarge;
 
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
-    <div id={sectionID} className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}>
+    <div
+      id={sectionID}
+      className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}
+    >
       <SectionHeading title="Portfolio" />
 
-      <div className={`w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5`}>
-        {myProjets.map((item, index) => (
-          <div key={index} className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}>
-            <img className={`w-full h-auto object-fill ${index === 1 && scaleImg}`} src={item.thumbnail} alt="" />
+      <div
+        className={`w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5`}
+      >
+        {myProjets.map((item, index, _) => (
+          <div
+            key={index}
+            className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}
+          >
+            <img
+              className={`w-full h-auto object-fill ${index === 1 && scaleImg}`}
+              src={item.thumbnail}
+              alt=""
+            />
             <div className={`${classes.mainContentDiv}`}>
               <div className={`${classes.hoverDiv}`}>
                 <h4 className={`${classes.hoverDivTitle}`}>{item.name}</h4>
@@ -63,7 +85,9 @@ const Portfolio = ({ sectionID }) => {
                     View Design
                   </a>
 
-                  {item.liveLink !== "" && <div className={`${classes.lineDivider}`}></div>}
+                  {item.liveLink !== "" && (
+                    <div className={`${classes.lineDivider}`}></div>
+                  )}
 
                   {item.liveLink !== "" && (
                     <a
@@ -86,12 +110,18 @@ const Portfolio = ({ sectionID }) => {
         <CtaBtnV1
           title="More Designs"
           customStyle={`mr-9`}
-          onPressed={() => window.open("https://www.behance.net/muhammadmohsin6", "_blank").focus()}
+          onPressed={() =>
+            window
+              .open("https://www.behance.net/muhammadmohsin6", "_blank")
+              .focus()
+          }
         />
         <CtaBtnV1
           title="More Live Projets"
           customStyle={``}
-          onPressed={() => window.open("https://github.com/MMohsin737", "_blank").focus()}
+          onPressed={() =>
+            window.open("https://github.com/MMohsin737", "_blank").focus()
+          }
         />
       </div>
     </div>

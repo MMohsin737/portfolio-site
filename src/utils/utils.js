@@ -19,18 +19,24 @@ export const closeNav = () => {
 };
 
 export const scrollTo = (sectionID) => {
-  document.querySelector("#" + sectionID).scrollIntoView({ behavior: "smooth" });
+  document
+    .querySelector("#" + sectionID)
+    .scrollIntoView({ behavior: "smooth" });
 };
 
 export const removeLoadingScreen = () => {
   window.onload = () => {
     document
       .getElementById("initialLoadingScreen")
-      .animate({ opacity: 0 }, { duration: 500, iterations: 1, easing: "ease-out" }).onfinish = () => {
+      .animate(
+        { opacity: 0 },
+        { duration: 300, iterations: 1, easing: "ease-out" }
+      ).onfinish = () => {
       enableNAV();
-      document
-        .querySelector("#initialLoadingScreen")
-        .parentNode.removeChild(document.getElementById("initialLoadingScreen"));
+      document.getElementById("initialLoadingScreen").style.opacity = 0;
+      // document
+      //   .querySelector("#initialLoadingScreen")
+      //   .parentNode.removeChild(document.getElementById("initialLoadingScreen"));
     };
   };
 };
