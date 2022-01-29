@@ -90,14 +90,13 @@ const Hero = ({ sectionID, children }) => {
 
         <motion.div
           // ref={ref}
-          initial="hidden"
-          animate="visible"
-          
-          transition={{ delay: 0.5,  duration: 1 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1,  duration: 1 }}
+          // variants={{
+          //   visible: { opacity: 1, scale: 1 },
+          //   hidden: { opacity: 0, scale: 0 },
+          // }}
           className={`md:w-1/2 w-full lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
         >
           <div className={`lg:w-4/6 w-full lg:ml-auto`}>
