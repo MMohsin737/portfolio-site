@@ -89,9 +89,9 @@ const Hero = ({ sectionID, children }) => {
         </div>
 
         <motion.div
-          ref={ref}
+          // ref={ref}
           initial="hidden"
-          animate={controls}
+          // animate={controls}
           transition={{ delay: 0.5,  duration: 1 }}
           variants={{
             visible: { opacity: 1, scale: 1 },
