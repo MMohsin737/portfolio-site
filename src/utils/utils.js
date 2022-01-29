@@ -30,13 +30,14 @@ export const removeLoadingScreen = () => {
       .getElementById("initialLoadingScreen")
       .animate(
         { opacity: 0 },
-        { duration: 300, iterations: 1, easing: "ease-out" }
+        { duration: 500, iterations: 1, easing: "ease-out" }
       ).onfinish = () => {
       enableNAV();
-      document.getElementById("initialLoadingScreen").style.opacity = 0;
-      // document
-      //   .querySelector("#initialLoadingScreen")
-      //   .parentNode.removeChild(document.getElementById("initialLoadingScreen"));
+      document
+        .querySelector("#initialLoadingScreen")
+        .parentNode.removeChild(
+          document.getElementById("initialLoadingScreen")
+        );
     };
   };
 };

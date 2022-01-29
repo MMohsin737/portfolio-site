@@ -1,9 +1,5 @@
-// Hooks
-// import { useEffect } from "react";
-
 // Plugin
-import { motion } from "framer-motion";
-// import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 
 // UI Widgets
 import HeroImage from "../../ui/hero-Image/HeroImage";
@@ -18,17 +14,14 @@ import { scrollTo } from "../../../utils/utils";
 import image from "../../../assets/images/hero-image.png";
 
 const Hero = ({ sectionID, children }) => {
-  // const controls = useAnimation();
-  // const { ref, inView } = useInView();
+  const controls = useAnimation();
 
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible");
-  //   }
-  //   if (!inView) {
-  //     controls.start("hidden");
-  //   }
-  // }, [controls, inView]);
+  const itervalID = setInterval(() => {
+    if (document.readyState === "complete") {
+      clearInterval(itervalID);
+      controls.start("visible");
+    }
+  }, 1);
 
   return (
     // <div
@@ -89,14 +82,13 @@ const Hero = ({ sectionID, children }) => {
         </div>
 
         <motion.div
-          // ref={ref}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1,  duration: 1 }}
-          // variants={{
-          //   visible: { opacity: 1, scale: 1 },
-          //   hidden: { opacity: 0, scale: 0 },
-          // }}
+          initial="hidden"
+          animate={controls}
+          transition={{ type: "spring", duration: 3.8 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0.75 },
+          }}
           className={`md:w-1/2 w-full lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
         >
           <div className={`lg:w-4/6 w-full lg:ml-auto`}>
