@@ -36,7 +36,7 @@ const AboutMe = ({ sectionID }) => {
       <div
         className={`w-full flex 2xl:flex-row xl:flex-row lg:flex-row flex-col`}
       >
-        <div className={`lg:w-1/2 w-full  lg:mb-0 mb-6`}>
+        <div className={`lg:w-1/2 md:w-3/5 w-full lg:mx-0 mx-auto lg:mb-0 mb-6`}>
           <div className={`w-11/12 mx-auto`}>
             <img
               className={`w-full h-full object-contain`}

@@ -8,4 +8,5 @@
 
 .disableScroll {
   overflow-y: hidden;
+  position: relative;
 }

@@ -5,3 +5,9 @@
 .rightsText{
   font-size: 0.7em;
 }
+
+@media screen and (max-width: 600px) {
+  .letterSpace3 {
+    letter-spacing: 2px;
+  }
+}

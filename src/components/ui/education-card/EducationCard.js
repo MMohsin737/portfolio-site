@@ -33,10 +33,10 @@ const EducationCard = ({
       <div className={`${classes["flip-card-inner"]}`}>
         <div className={`mx-auto flex flex-row text-white ${bodybg[mapKey]}`}>
           <div
-            className={`mr-3 w-28 h-20 p-2 flex justify-center items-center ${iconbg[mapKey]}`}
+            className={`mr-3 w-28 md:h-20 h-24 p-2 flex justify-center items-center ${iconbg[mapKey]}`}
           >
             <img
-              className={`h-14 w-16 object-contain`}
+              className={`md:h-14 md:w-16 h-12 w-14 object-contain`}
               src={icon}
               alt={instituteName}
             />
@@ -45,7 +45,7 @@ const EducationCard = ({
             className={`flex flex-col w-full items-center mr-3 justify-center `}
           >
             {/* Title */}
-            <h2 className={`text-lg w-full text-left`}>{title}</h2>
+            <h2 className={`md:text-lg text-sm w-full text-left`}>{title}</h2>
 
             {/* Divider */}
             <div className={`${classes.cardDividerVertical}`}></div>
@@ -67,12 +67,12 @@ const EducationCard = ({
     <div className={`${classes["flip-card-back"]}`}>
       <div className={`${classes["flip-card-inner"]}`}>
         <div
-          className={`flex flex-col justify-center items-center p-2 h-20 ${bodybg[mapKey]}`}
+          className={`flex flex-col justify-center items-center p-2 md:h-20 h-24 ${bodybg[mapKey]}`}
         >
           <h4 className={`text-white text-base font-semibold uppercase`}>
             Specialization
           </h4>
-          <h4 className={`text-white text-base`}>{info}</h4>
+          <h4 className={`text-white text-center md:text-base text-sm`}>{info}</h4>
         </div>
       </div>
     </div>
@@ -83,17 +83,17 @@ const EducationCard = ({
       <div className={`${classes["flip-card-inner"]}`}>
         <div className={`mx-auto flex flex-row text-white ${bodybg[mapKey]}`}>
           <div
-            className={`mr-3 w-28 h-20 p-2 flex justify-center items-center ${iconbg[mapKey]}`}
+            className={`mr-3 w-28 md:h-20 h-24 p-2 flex justify-center items-center ${iconbg[mapKey]}`}
           >
             <img
-              className={`h-14 w-16 object-contain`}
+              className={`md:h-14 md:w-16 h-12 w-14 object-contain`}
               src={icon}
               alt={instituteName}
             />
           </div>
           <div className={`flex flex-row w-full items-center pr-3`}>
             {/* Title */}
-            <h2 className={`flex-grow text-base w-3/4 text-left`}>{title}</h2>
+            <h2 className={`flex-grow md:text-base text-sm w-3/4 text-left`}>{title}</h2>
 
             <div className={`flex flex-row`}>
               {/* Divider */}
@@ -121,9 +121,9 @@ const EducationCard = ({
     <div className={`${classes["flip-card-back"]}`}>
       <div className={`${classes["flip-card-inner"]}`}>
         <div
-          className={`flex flex-col justify-center items-center p-2 h-20 ${bodybg[mapKey]}`}
+          className={`flex flex-col justify-center items-center p-2 md:h-20 h-24 ${bodybg[mapKey]}`}
         >
-          <h4 className={`text-white text-base`}>{info}</h4>
+          <h4 className={`text-white md:text-base text-sm`}>{info}</h4>
           <a
             target="_blank"
             className={`bg-transparent text-white text-sm mt-1`}

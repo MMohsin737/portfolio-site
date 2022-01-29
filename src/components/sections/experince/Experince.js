@@ -1,3 +1,6 @@
+// Hook
+import { useState } from "react";
+
 // UI Widgets
 import SectionHeading from "../../ui/section-heading/SectionHeading";
 import CompanyExpCard from "../../ui/company-exp-card/CompanyExpCard";
@@ -11,10 +14,18 @@ import overrootLogo from "../../../assets/images/overroot-logo.png";
 import classes from "./Experince.module.css";
 
 const Experince = ({ sectionID }) => {
+  const [screenWidth, setScreenWidth] = useState(window.screen.width)
+
+  window.addEventListener("resize", (event) => {
+    setScreenWidth(event.currentTarget.innerWidth);
+  });
 
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
-    <div id={sectionID} className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}>
+    <div
+      id={sectionID}
+      className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}
+    >
       <SectionHeading title="Experince" />
 
       <div className={`flex md:flex-row flex-col items-center justify-center`}>
@@ -29,17 +40,29 @@ const Experince = ({ sectionID }) => {
             spacingStyle={``}
           />
 
-          <div className={`flex justify-end items-center ${classes.height320} ${classes.respDate}`}>
-            <span className={`block h-fit w-fit text-lg text-gray-500 font-medium `}>2018</span>
+          <div
+            className={`flex justify-end items-center ${classes.height320} ${classes.respDate}`}
+          >
+            <span
+              className={`block h-fit w-fit text-lg text-gray-500 font-medium `}
+            >
+              2018
+            </span>
           </div>
         </div>
 
         {/* Divider */}
-        {window.screen.width > 600 && <TimelineDivider />}
+        {screenWidth > 600 && <TimelineDivider />}
 
         <div className={`flex flex-col h-max md:mt-0 mt-8`}>
-          <div className={`flex justify-start items-center ${classes.height320} ${classes.respDate}`}>
-            <span className={`block h-fit w-fit text-lg text-gray-500 font-medium mb-2`}>2022</span>
+          <div
+            className={`flex justify-start items-center ${classes.height320} ${classes.respDate}`}
+          >
+            <span
+              className={`block h-fit w-fit text-lg text-gray-500 font-medium mb-2`}
+            >
+              2022
+            </span>
           </div>
           <CompanyExpCard
             imgSrc={overrootLogo}

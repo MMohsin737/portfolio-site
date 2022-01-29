@@ -1,5 +1,5 @@
 // Plugin
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 
 // UI Widgets
 import HeroImage from "../../ui/hero-Image/HeroImage";
@@ -40,51 +40,111 @@ const Hero = ({ sectionID, children }) => {
         <div className={`flex-1 flex flex-col justify-center items-start`}>
           <HeroTextConent />
 
-          <div
-            className={`flex flex-row w-full lg:justify-start justify-center mb-8`}
-          >
-            <SocialIcon
-              styleClasses={`w-8 h-8`}
-              styleSpacing={`mr-3`}
-              type="LinkedIn"
-              linkToProfile={
-                "https://www.linkedin.com/in/muhammad-mohsin-166112159/"
-              }
-            />
-            <SocialIcon
-              styleClasses={`w-8 h-8`}
-              styleSpacing={`mr-3`}
-              type="GitHub"
-              linkToProfile={"https://github.com/MMohsin737"}
-            />
-            <SocialIcon
-              styleClasses={`w-8 h-8`}
-              styleSpacing={``}
-              type="Behance"
-              linkToProfile={"https://www.behance.net/muhammadmohsin6"}
-            />
-          </div>
+          <AnimatePresence>
+            <div
+              className={`flex flex-row w-full lg:justify-start justify-center mb-8`}
+            >
+              <motion.div
+                key="extSocioIconLink1"
+                initial="hidden"
+                animate={controls}
+                transition={{ delay: 1.8, type: "spring", duration: 1.8 }}
+                variants={{
+                  visible: { opacity: 1, x: 0 },
+                  hidden: { opacity: 0, x: -10 },
+                }}
+              >
+                <SocialIcon
+                  styleClasses={`w-8 h-8`}
+                  styleSpacing={`mr-3`}
+                  type="LinkedIn"
+                  linkToProfile={
+                    "https://www.linkedin.com/in/muhammad-mohsin-166112159/"
+                  }
+                />
+              </motion.div>
+
+              <motion.div
+                key="extSocioIconLink2"
+                initial="hidden"
+                animate={controls}
+                transition={{ delay: 2, type: "spring", duration: 1.8 }}
+                variants={{
+                  visible: { opacity: 1, x: 0 },
+                  hidden: { opacity: 0, x: -10 },
+                }}
+              >
+                <SocialIcon
+                  styleClasses={`w-8 h-8`}
+                  styleSpacing={`mr-3`}
+                  type="GitHub"
+                  linkToProfile={"https://github.com/MMohsin737"}
+                />
+              </motion.div>
+
+              <motion.div
+                key="extSocioIconLink3"
+                initial="hidden"
+                animate={controls}
+                transition={{ delay: 2.2, type: "spring", duration: 1.8 }}
+                variants={{
+                  visible: { opacity: 1, x: 0 },
+                  hidden: { opacity: 0, x: -10 },
+                }}
+              >
+                <SocialIcon
+                  styleClasses={`w-8 h-8`}
+                  styleSpacing={``}
+                  type="Behance"
+                  linkToProfile={"https://www.behance.net/muhammadmohsin6"}
+                />
+              </motion.div>
+            </div>
+          </AnimatePresence>
 
           <div
             className={`flex flex-row w-full lg:justify-start justify-center p-3`}
           >
-            <CtaBtnV1
-              title="See My Work"
-              customStyle={`mr-9`}
-              onPressed={() => scrollTo("portfolio")}
-            />
-            <CtaBtnV1
-              title="Lets's Talk"
-              customStyle={``}
-              onPressed={() => scrollTo("letsTalk")}
-            />
+            <motion.div
+              key="socioIcon3"
+              initial="hidden"
+              animate={controls}
+              transition={{ delay: 2.4, type: "spring", duration: 1.8 }}
+              variants={{
+                visible: { scale: 1 },
+                hidden: { scale: 0 },
+              }}
+            >
+              <CtaBtnV1
+                title="See My Work"
+                customStyle={`mr-9`}
+                onPressed={() => scrollTo("portfolio")}
+              />
+            </motion.div>
+
+            <motion.div
+              key="socioIcon3"
+              initial="hidden"
+              animate={controls}
+              transition={{ delay: 2.8, type: "spring", duration: 1.8 }}
+              variants={{
+                visible: { scale: 1 },
+                hidden: { scale: 0 },
+              }}
+            >
+              <CtaBtnV1
+                title="Lets's Talk"
+                customStyle={``}
+                onPressed={() => scrollTo("letsTalk")}
+              />
+            </motion.div>
           </div>
         </div>
 
         <motion.div
           initial="hidden"
           animate={controls}
-          transition={{ type: "spring", duration: 3.8 }}
+          transition={{ type: "spring", duration: 1.3 }}
           variants={{
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0.75 },
