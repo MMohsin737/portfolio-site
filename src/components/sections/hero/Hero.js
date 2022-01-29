@@ -1,9 +1,9 @@
 // Hooks
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 // Plugin
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
 
 // UI Widgets
 import HeroImage from "../../ui/hero-Image/HeroImage";
@@ -18,17 +18,17 @@ import { scrollTo } from "../../../utils/utils";
 import image from "../../../assets/images/hero-image.png";
 
 const Hero = ({ sectionID, children }) => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView();
+  // const controls = useAnimation();
+  // const { ref, inView } = useInView();
 
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-    if (!inView) {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start("visible");
+  //   }
+  //   if (!inView) {
+  //     controls.start("hidden");
+  //   }
+  // }, [controls, inView]);
 
   return (
     // <div
