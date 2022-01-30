@@ -7,6 +7,7 @@
 
 html {
   transition: all 0.7s ease-out;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   margin: 0;
   /* font-family: "Comfortaa", cursive; */
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: auto;
 
   -webkit-font-smoothing: antialiased;
