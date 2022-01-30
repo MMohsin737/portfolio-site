@@ -1,3 +1,10 @@
+// Hooks
+import { useEffect } from "react";
+
+// Plugin
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 // UI Widgets
 import SectionHeading from "../../ui/section-heading/SectionHeading";
 import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
@@ -13,6 +20,9 @@ import EBookGuard from "../../../assets/images/ebook_guard.png";
 import Critic from "../../../assets/images/critic.png";
 
 const Portfolio = ({ sectionID }) => {
+  const scaleImg = classes.enlarge;
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 1 });
   const myProjets = [
     {
       name: "Elysium Sols",
@@ -51,12 +61,17 @@ const Portfolio = ({ sectionID }) => {
     },
   ];
 
-  const scaleImg = classes.enlarge;
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
     <div
       id={sectionID}
+      ref={ref}
       className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}
     >
       <SectionHeading title="Portfolio" />
@@ -65,8 +80,20 @@ const Portfolio = ({ sectionID }) => {
         className={`w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5`}
       >
         {myProjets.map((item, index, _) => (
-          <div
+          <motion.div
             key={index}
+            initial="hidden"
+            transition={{
+              delay: index / 2.1,
+              type: "tween",
+              ease: ["easeInOut"],
+              duration: 1,
+            }}
+            animate={controls}
+            variants={{
+              visible: { opacity: 1 },
+              hidden: { opacity: 0 },
+            }}
             className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}
           >
             <img
@@ -104,27 +131,60 @@ const Portfolio = ({ sectionID }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       <div className="w-full flex flex-row items-center justify-center mt-8">
-        <CtaBtnV1
-          title="More Designs"
-          customStyle={`mr-9`}
-          onPressed={() =>
-            window
-              .open("https://www.behance.net/muhammadmohsin6", "_blank")
-              .focus()
-          }
-        />
-        <CtaBtnV1
-          title="More Live Projets"
-          customStyle={``}
-          onPressed={() =>
-            window.open("https://github.com/MMohsin737", "_blank").focus()
-          }
-        />
+        <motion.div
+          key="CTA_BTN_PORTFOLIO_1"
+          initial="hidden"
+          animate={controls}
+          transition={{
+            delay: 2,
+            type: "tween",
+            duration: 1,
+            ease: ["easeInOut"],
+          }}
+          variants={{
+            visible: { scale: 1, opacity: 1 },
+            hidden: { scale: 0, opacity: 0 },
+          }}
+        >
+          <CtaBtnV1
+            title="More Designs"
+            customStyle={`mr-9`}
+            onPressed={() =>
+              window
+                .open("https://www.behance.net/muhammadmohsin6", "_blank")
+                .focus()
+            }
+          />
+        </motion.div>
+
+        <motion.div
+          key="CTA_BTN_PORTFOLIO_2"
+          initial="hidden"
+          animate={controls}
+          transition={{
+            delay: 2.5,
+            type: "tween",
+            duration: 1,
+            ease: ["easeInOut"],
+          }}
+          variants={{
+            visible: { scale: 1, opacity: 1 },
+            hidden: { scale: 0, opacity: 0 },
+          }}
+        >
+          <CtaBtnV1
+            title="More Live Projets"
+            customStyle={``}
+            onPressed={() =>
+              window.open("https://github.com/MMohsin737", "_blank").focus()
+            }
+          />
+        </motion.div>
       </div>
     </div>
   );

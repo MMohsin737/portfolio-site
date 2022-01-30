@@ -48,6 +48,7 @@ const AboutMe = ({ sectionID }) => {
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
     <div
+      ref={ref}
       id={sectionID}
       className={`mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}
     >
@@ -57,7 +58,6 @@ const AboutMe = ({ sectionID }) => {
         className={`w-full flex 2xl:flex-row xl:flex-row lg:flex-row flex-col`}
       >
         <motion.div
-          ref={ref}
           initial="hidden"
           transition={{ type: "tween", duration: 1, ease: ["easeInOut"] }}
           animate={controls}
@@ -74,7 +74,6 @@ const AboutMe = ({ sectionID }) => {
         </motion.div>
 
         <motion.div
-          ref={ref}
           initial="hidden"
           transition={{ type: "tween", duration: 1, ease: ["easeInOut"] }}
           animate={controls}
@@ -95,7 +94,12 @@ const AboutMe = ({ sectionID }) => {
           <motion.div
             initial="hidden"
             animate={controls}
-            transition={{ delay: 1, type: "spring", duration: 1, mass: 2 }}
+            transition={{
+              delay: 1,
+              type: "tween",
+              duration: 1,
+              ease: ["easeInOut"],
+            }}
             variants={{
               visible: { scale: 1 },
               hidden: { scale: 0 },

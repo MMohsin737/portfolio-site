@@ -48,7 +48,12 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink1"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 1.5, type: "spring", duration: 2, mass: 2 }}
+                transition={{
+                  delay: 1.5,
+                  type: "spring",
+                  duration: 2,
+                  mass: 2,
+                }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
@@ -68,7 +73,12 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink2"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 1.8, type: "spring", duration: 2, mass: 2 }}
+                transition={{
+                  delay: 1.8,
+                  type: "spring",
+                  duration: 2,
+                  mass: 2,
+                }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
@@ -86,7 +96,12 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink3"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 2.2, type: "spring", duration: 2, mass: 2 }}
+                transition={{
+                  delay: 2.2,
+                  type: "spring",
+                  duration: 2,
+                  mass: 2,
+                }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
@@ -109,7 +124,12 @@ const Hero = ({ sectionID, children }) => {
               key="CTABTN1"
               initial="hidden"
               animate={controls}
-              transition={{ delay: 2.5, type: "spring", duration: 2, mass: 2 }}
+              transition={{
+                delay: 2.5,
+                type: "tween",
+                duration: 1,
+                ease: ["easeInOut"],
+              }}
               variants={{
                 visible: { scale: 1 },
                 hidden: { scale: 0 },
@@ -126,7 +146,12 @@ const Hero = ({ sectionID, children }) => {
               key="CTABTN2"
               initial="hidden"
               animate={controls}
-              transition={{ delay: 2.8, type: "spring", duration: 2, mass: 2 }}
+              transition={{
+                delay: 2.8,
+                type: "tween",
+                duration: 1,
+                ease: ["easeInOut"],
+              }}
               variants={{
                 visible: { scale: 1 },
                 hidden: { scale: 0 },
@@ -144,7 +169,7 @@ const Hero = ({ sectionID, children }) => {
         <motion.div
           initial="hidden"
           animate={controls}
-          transition={{ type: "spring", duration: 1.3,  mass: 2 }}
+          transition={{ type: "tween", duration: 1, ease: ["easeOut"] }}
           variants={{
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0 },

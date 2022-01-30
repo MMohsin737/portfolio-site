@@ -37,18 +37,20 @@ const Experince = ({ sectionID }) => {
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
     <div
       id={sectionID}
+      ref={ref}
       className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}
     >
       <SectionHeading title="Experince" />
 
-      <div className={`flex md:flex-row flex-col items-center justify-center notSelectable`}>
+      <div
+        className={`flex md:flex-row flex-col items-center justify-center notSelectable`}
+      >
         <div className={`flex flex-col`}>
           <motion.div
-            ref={ref}
             initial="hidden"
             animate={controls}
             transition={{
-              delay: 2,
+              delay: 1.5,
               type: "tween",
               duration: 1,
               ease: ["linear"],
@@ -70,7 +72,6 @@ const Experince = ({ sectionID }) => {
           </motion.div>
 
           <motion.div
-            ref={ref}
             initial="hidden"
             animate={controls}
             transition={{
@@ -98,7 +99,6 @@ const Experince = ({ sectionID }) => {
 
         <div className={`flex flex-col h-max md:mt-0 mt-8`}>
           <motion.div
-            ref={ref}
             initial="hidden"
             animate={controls}
             transition={{
@@ -121,11 +121,10 @@ const Experince = ({ sectionID }) => {
           </motion.div>
 
           <motion.div
-            ref={ref}
             initial="hidden"
             animate={controls}
             transition={{
-              delay: 2,
+              delay: 1.5,
               type: "tween",
               duration: 1,
               ease: ["linear"],

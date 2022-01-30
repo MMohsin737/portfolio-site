@@ -61,6 +61,7 @@ const ToolsTechnologies = ({ sectionID }) => {
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
     <div
       id={sectionID}
+      ref={ref}
       className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}
     >
       <SectionHeading title="Technologies" subtitle="" />
@@ -84,7 +85,6 @@ const ToolsTechnologies = ({ sectionID }) => {
                 return (
                   <motion.div
                     key={index}
-                    ref={ref}
                     initial="hidden"
                     transition={{
                       type: "spring",
@@ -108,10 +108,10 @@ const ToolsTechnologies = ({ sectionID }) => {
                 return (
                   <motion.div
                     key={index}
-                    ref={ref}
                     initial="hidden"
                     transition={{
-                      delay: index / 2.1,
+
+                      delay: index / 5,
                       type: "spring",
                       mass: 2,
                     }}
@@ -154,10 +154,9 @@ const ToolsTechnologies = ({ sectionID }) => {
               return (
                 <motion.div
                   key={index}
-                  ref={ref}
                   initial="hidden"
                   transition={{
-                    delay: index / 2.1,
+                    delay: index / 5,
                     type: "spring",
                     mass: 2,
                   }}

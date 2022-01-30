@@ -121,6 +121,13 @@ const EducationCard = ({
     </div>
   );
 
+  const underLine = (
+    <div className={`w-full flex flex-row justify-center items-center`}>
+      <div className={`${classes.underline}`}></div>
+      <div className={`${classes.underline}`}></div>
+    </div>
+  );
+
   const certificateCardBodyBack = (
     <div className={`${classes["flip-card-back"]}`}>
       <div className={`${classes["flip-card-inner"]}`}>
@@ -130,11 +137,12 @@ const EducationCard = ({
           <h4 className={`text-white md:text-base text-sm`}>{info}</h4>
           <a
             target="_blank"
-            className={`bg-transparent text-white text-sm mt-1`}
+            className={`bg-transparent text-white text-sm mt-1 ${classes.paretnBTN}`}
             href={certificateURL}
             rel="noreferrer"
           >
             See Credentials
+            {underLine}
           </a>
         </div>
       </div>

@@ -27,7 +27,7 @@ const TimelineDivider = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      transition={{ delay: 0.3, type: "tween", duration: 1, easings: ["easeOut"] }}
+      transition={{ delay: 0.3, type: "tween", duration: 1, easings: ["easeInOut"] }}
       variants={{
         visible: { opacity: 1 },
         hidden: { opacity: 0 },
