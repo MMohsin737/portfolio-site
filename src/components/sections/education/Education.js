@@ -52,14 +52,14 @@ const Education = ({ sectionID }) => {
 
         <SectionDivider
           dividerHeight={`my-auto`}
-          customStyle={`xl:block lg:block lg:block hidden ${classes["height-250px"]}`}
+          customStyle={`xl:block lg:block lg:block hidden xl:mx-0 mx-4 ${classes["height-250px"]}`}
         />
 
         {/* Certificates */}
         <div className={`flex-1 flex flex-col lg:w-full md:w-4/5 w-full mx-auto lg:mt-0 mt-44`}>
           <h6 className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}>Certificates</h6>
 
-          <div className={`mt-14 h-full flex-1 flex flex-col justify-between items-center `}>
+          <div className={`mt-14 h-full flex-1 flex flex-col justify-between items-center`}>
             <EducationCard
               cardType="certificate"
               icon={udemyIcon}

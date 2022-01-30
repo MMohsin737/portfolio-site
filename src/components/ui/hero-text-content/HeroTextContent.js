@@ -21,7 +21,7 @@ const HeroTextConent = () => {
   }, 1);
 
   return (
-    <div className="w-full mb-8">
+    <div className="w-full mb-8 lg:px-0 px-2">
       <motion.h1
         initial="hidden"
         animate={controls}

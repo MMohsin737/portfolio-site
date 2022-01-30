@@ -11,7 +11,7 @@ import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
 import { scrollTo } from "../../../utils/utils";
 
 // Image
-import image from "../../../assets/images/hero-image.png";
+import image from "../../../assets/images/hero-image.jpg";
 
 const Hero = ({ sectionID, children }) => {
   const controls = useAnimation();
@@ -32,7 +32,7 @@ const Hero = ({ sectionID, children }) => {
       id={sectionID}
       className={`flex flex-col mt-12 mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}
     >
-      <div className={`w-full mb-10`}>{children}</div>
+      <div className={`w-full lg:mb-10 mb-5`}>{children}</div>
 
       <div
         className={`w-full mt-10 h-full flex lg:flex-row flex-col-reverse justify-between items-center`}
@@ -55,7 +55,7 @@ const Hero = ({ sectionID, children }) => {
                 }}
               >
                 <SocialIcon
-                  styleClasses={`w-8 h-8`}
+                  styleClasses={`w-6 h-6`}
                   styleSpacing={`mr-3`}
                   type="LinkedIn"
                   linkToProfile={
@@ -75,7 +75,7 @@ const Hero = ({ sectionID, children }) => {
                 }}
               >
                 <SocialIcon
-                  styleClasses={`w-8 h-8`}
+                  styleClasses={`w-6 h-6`}
                   styleSpacing={`mr-3`}
                   type="GitHub"
                   linkToProfile={"https://github.com/MMohsin737"}
@@ -93,7 +93,7 @@ const Hero = ({ sectionID, children }) => {
                 }}
               >
                 <SocialIcon
-                  styleClasses={`w-8 h-8`}
+                  styleClasses={`w-6 h-6`}
                   styleSpacing={``}
                   type="Behance"
                   linkToProfile={"https://www.behance.net/muhammadmohsin6"}
@@ -106,7 +106,7 @@ const Hero = ({ sectionID, children }) => {
             className={`flex flex-row w-full lg:justify-start justify-center p-3`}
           >
             <motion.div
-              key="socioIcon3"
+              key="CTABTN2"
               initial="hidden"
               animate={controls}
               transition={{ delay: 2.4, type: "spring", duration: 1.8 }}
@@ -123,7 +123,7 @@ const Hero = ({ sectionID, children }) => {
             </motion.div>
 
             <motion.div
-              key="socioIcon3"
+              key="CTABTN2"
               initial="hidden"
               animate={controls}
               transition={{ delay: 2.8, type: "spring", duration: 1.8 }}
@@ -149,9 +149,9 @@ const Hero = ({ sectionID, children }) => {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0.75 },
           }}
-          className={`md:w-1/2 w-full lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
+          className={`lg:w-full md:w-2/5 w-9/12 lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
         >
-          <div className={`lg:w-4/6 w-full lg:ml-auto`}>
+          <div className={`xl:w-4/6 lg:w-4/5 w-full lg:ml-auto`}>
             <HeroImage imageSrc={image} />
           </div>
         </motion.div>

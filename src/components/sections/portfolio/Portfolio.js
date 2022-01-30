@@ -5,44 +5,46 @@ import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
 // Styling
 import classes from "./Portfolio.module.css";
 
+// Images
+import ElysiumSols from "../../../assets/images/elysium_sol.png";
+import ExhangeRateApp from "../../../assets/images/exchange_app.png";
+import SwiftTraning from "../../../assets/images/swift_traning.jpg";
+import EBookGuard from "../../../assets/images/ebook_guard.png";
+import Critic from "../../../assets/images/critic.png";
+
 const Portfolio = ({ sectionID }) => {
   const myProjets = [
     {
       name: "Elysium Sols",
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1d713d130524295.6182155b6fcc5.png",
+      thumbnail: ElysiumSols,
       liveLink: "https://elysiumsols.com/",
       designLink:
         "https://www.behance.net/gallery/130524295/Tech-Company-Landing-Page",
     },
     {
       name: "Exhange Rate App",
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/790204105463953.5f79fa2d86990.png",
+      thumbnail: ExhangeRateApp,
       liveLink: "",
       designLink:
         "https://www.behance.net/gallery/105463953/Exchange-Rate-Mobile-Application",
     },
     {
       name: "Swift Traning",
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7654f997051517.5ebc366a7af14.png",
+      thumbnail: SwiftTraning,
       liveLink: "",
       designLink:
         "https://www.behance.net/gallery/97051517/Professional-Training-Providing-Firm-Landing-Page",
     },
     {
       name: "E-Book Guard",
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3d208796994401.5ebb01972aab1.png",
+      thumbnail: EBookGuard,
       liveLink: "",
       designLink:
         "https://www.behance.net/gallery/96994401/Landing-Page-%28eBookGuard%29",
     },
     {
       name: "Critic",
-      thumbnail:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/effca596175207.5ea871aeb504c.png",
+      thumbnail: Critic,
       liveLink: "",
       designLink:
         "https://www.behance.net/gallery/96175207/Crtic-%28Design-Work-Review-Site%29",
