@@ -14,7 +14,7 @@ import classes from "./LetsTalk.module.css";
 
 const LetsTalk = ({ sectionID }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 1 });
+  const [ref, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
@@ -97,7 +97,7 @@ const LetsTalk = ({ sectionID }) => {
             }}
           >
             <SocialIcon
-              styleClasses={`w-8 h-8`}
+              styleClasses={`md:w-8 w-6 md:h-8 h-6`}
               styleSpacing={`mr-3`}
               type="LinkedIn"
               linkToProfile={
@@ -121,7 +121,7 @@ const LetsTalk = ({ sectionID }) => {
             }}
           >
             <SocialIcon
-              styleClasses={`w-8 h-8`}
+              styleClasses={`md:w-8 w-6 md:h-8 h-6`}
               styleSpacing={`mr-3`}
               type="GitHub"
               linkToProfile={"https://github.com/MMohsin737"}
@@ -143,7 +143,7 @@ const LetsTalk = ({ sectionID }) => {
             }}
           >
             <SocialIcon
-              styleClasses={`w-8 h-8`}
+              styleClasses={`md:w-8 w-6 md:h-8 h-6`}
               styleSpacing={``}
               type="Behance"
               linkToProfile={"https://www.behance.net/muhammadmohsin6"}

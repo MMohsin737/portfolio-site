@@ -22,7 +22,7 @@ import Critic from "../../../assets/images/critic.png";
 const Portfolio = ({ sectionID }) => {
   const scaleImg = classes.enlarge;
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 1 });
+  const [ref, inView] = useInView();
   const myProjets = [
     {
       name: "Elysium Sols",
@@ -84,7 +84,7 @@ const Portfolio = ({ sectionID }) => {
             key={index}
             initial="hidden"
             transition={{
-              delay: index / 2.1,
+              delay: index / 5,
               type: "tween",
               ease: ["easeInOut"],
               duration: 1,

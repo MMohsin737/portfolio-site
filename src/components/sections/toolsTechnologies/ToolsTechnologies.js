@@ -34,7 +34,7 @@ import reactJSicon from "../../../assets/images/react-js.svg";
 
 const ToolsTechnologies = ({ sectionID }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 1 });
+  const [ref, inView] = useInView();
   const designIcons = [figma, xd, ai, ps, blender];
   const developmentIcons = [
     antUIdesign,

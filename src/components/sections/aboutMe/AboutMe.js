@@ -17,7 +17,7 @@ import Resume from "../../../assets/download/Muhammad_Mohsin.pdf";
 
 const AboutMe = ({ sectionID }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 1 });
+  const [ref, inView] = useInView();
 
   const animVariantImage = {
     visible: { opacity: 1, x: 0 },

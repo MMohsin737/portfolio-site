@@ -21,7 +21,7 @@ import classes from "./Education.module.css";
 
 const Education = ({ sectionID }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 1 });
+  const [ref, inView] = useInView();
 
   const animVariantLeft = {
     visible: { opacity: 1, x: 0 },
@@ -49,7 +49,7 @@ const Education = ({ sectionID }) => {
       <SectionHeading title="Education" />
 
       <div
-        className={`w-full flex lg:flex-row flex-col justify-center items-start ${classes["height-360px"]}`}
+        className={`w-full flex lg:flex-row flex-col justify-center items-start `}
       >
         {/* Academic */}
         <div
@@ -103,7 +103,7 @@ const Education = ({ sectionID }) => {
                 joiningPassing="2014 to 2018"
                 info="Game Development - Application Development"
                 certificateURL=""
-                customSpacing={`mt-3 mx-auto`}
+                customSpacing={`md:mt-3 mt-7 mx-auto`}
               />
             </motion.div>
           </div>
@@ -170,7 +170,7 @@ const Education = ({ sectionID }) => {
                 joiningPassing={"May 2020".toUpperCase()}
                 info="UC-20b35940-81d1-44bf-a640-a51836471b77"
                 certificateURL="https://ude.my/UC-20b35940-81d1-44bf-a640-a51836471b77"
-                customSpacing={`mt-3 mx-auto`}
+                customSpacing={`md:mt-3 mt-7 mx-auto`}
               />
             </motion.div>
 
@@ -194,7 +194,7 @@ const Education = ({ sectionID }) => {
                 joiningPassing={"Aug 2020".toUpperCase()}
                 info="93CR7GXEJQPZ"
                 certificateURL="https://coursera.org/verify/93CR7GXEJQPZ"
-                customSpacing={`mt-3 mx-auto`}
+                customSpacing={`md:mt-3 mt-7 mx-auto`}
               />
             </motion.div>
           </div>
