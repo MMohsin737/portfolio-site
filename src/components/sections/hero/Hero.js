@@ -48,14 +48,14 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink1"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 1.8, type: "spring", duration: 1.8 }}
+                transition={{ delay: 1.5, type: "spring", duration: 2 }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
                 }}
               >
                 <SocialIcon
-                  styleClasses={`w-6 h-6`}
+                  styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
                   styleSpacing={`mr-3`}
                   type="LinkedIn"
                   linkToProfile={
@@ -68,14 +68,14 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink2"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 2, type: "spring", duration: 1.8 }}
+                transition={{ delay: 1.8, type: "spring", duration: 2 }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
                 }}
               >
                 <SocialIcon
-                  styleClasses={`w-6 h-6`}
+                  styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
                   styleSpacing={`mr-3`}
                   type="GitHub"
                   linkToProfile={"https://github.com/MMohsin737"}
@@ -86,14 +86,14 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink3"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 2.2, type: "spring", duration: 1.8 }}
+                transition={{ delay: 2.2, type: "spring", duration: 2 }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
                 }}
               >
                 <SocialIcon
-                  styleClasses={`w-6 h-6`}
+                  styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
                   styleSpacing={``}
                   type="Behance"
                   linkToProfile={"https://www.behance.net/muhammadmohsin6"}
@@ -109,7 +109,7 @@ const Hero = ({ sectionID, children }) => {
               key="CTABTN2"
               initial="hidden"
               animate={controls}
-              transition={{ delay: 2.4, type: "spring", duration: 1.8 }}
+              transition={{ delay: 2.5, type: "spring", duration: 2 }}
               variants={{
                 visible: { scale: 1 },
                 hidden: { scale: 0 },
@@ -126,7 +126,7 @@ const Hero = ({ sectionID, children }) => {
               key="CTABTN2"
               initial="hidden"
               animate={controls}
-              transition={{ delay: 2.8, type: "spring", duration: 1.8 }}
+              transition={{ delay: 2.8, type: "spring", duration: 2 }}
               variants={{
                 visible: { scale: 1 },
                 hidden: { scale: 0 },
@@ -147,9 +147,9 @@ const Hero = ({ sectionID, children }) => {
           transition={{ type: "spring", duration: 1.3 }}
           variants={{
             visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0.75 },
+            hidden: { opacity: 0, scale: 0 },
           }}
-          className={`lg:w-full md:w-2/5 w-9/12 lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
+          className={`xl:w-3/5 lg:w-full md:w-2/5 w-9/12 lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
         >
           <div className={`xl:w-4/6 lg:w-4/5 w-full lg:ml-auto`}>
             <HeroImage imageSrc={image} />

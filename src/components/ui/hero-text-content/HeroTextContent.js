@@ -25,7 +25,7 @@ const HeroTextConent = () => {
       <motion.h1
         initial="hidden"
         animate={controls}
-        transition={{ delay: 1.2, type: "spring", duration: 2 }}
+        transition={{ delay: 0.5, type: "spring", duration: 2 }}
         variants={animVariants}
         className={`${classes.mainTitle} text-white font-light lg:text-left text-center`}
       >
@@ -37,7 +37,7 @@ const HeroTextConent = () => {
       <motion.h3
         initial="hidden"
         animate={controls}
-        transition={{ delay: 1.4, type: "spring", duration: 2 }}
+        transition={{ delay: 0.8, type: "spring", duration: 2 }}
         variants={animVariants}
         className={`${classes.subTitle} leading-tight lg:text-left text-center text-white font-light`}
       >
@@ -49,7 +49,7 @@ const HeroTextConent = () => {
         <motion.span
           initial="hidden"
           animate={controls}
-          transition={{ delay: 1.6, type: "spring", duration: 2 }}
+          transition={{ delay: 1.2, type: "spring", duration: 2 }}
           variants={animVariants}
           className={`block w-full`}
         >
