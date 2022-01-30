@@ -72,7 +72,9 @@ const EducationCard = ({
           <h4 className={`text-white text-base font-semibold uppercase`}>
             Specialization
           </h4>
-          <h4 className={`text-white text-center md:text-base text-sm`}>{info}</h4>
+          <h4 className={`text-white text-center md:text-base text-sm`}>
+            {info}
+          </h4>
         </div>
       </div>
     </div>
@@ -93,7 +95,9 @@ const EducationCard = ({
           </div>
           <div className={`flex flex-row w-full items-center pr-3`}>
             {/* Title */}
-            <h2 className={`flex-grow md:text-base text-sm w-3/4 text-left`}>{title}</h2>
+            <h2 className={`flex-grow md:text-base text-sm w-3/4 text-left`}>
+              {title}
+            </h2>
 
             <div className={`flex flex-row`}>
               {/* Divider */}
@@ -149,7 +153,7 @@ const EducationCard = ({
 
   return (
     <div
-      className={`xl:w-10/12 w-full ${classes["flip-card"]} ${customSpacing} notSelectable`}
+      className={`xl:w-10/12 w-full h-full ${classes["flip-card"]} ${customSpacing} notSelectable`}
     >
       {cardFront}
       {cardBack}

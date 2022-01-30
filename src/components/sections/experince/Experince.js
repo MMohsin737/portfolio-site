@@ -1,5 +1,9 @@
 // Hook
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+// Plugin
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 // UI Widgets
 import SectionHeading from "../../ui/section-heading/SectionHeading";
@@ -12,13 +16,22 @@ import overrootLogo from "../../../assets/images/overroot-logo.png";
 
 // Styling
 import classes from "./Experince.module.css";
+import "../../../theme/utilities.css";
 
 const Experince = ({ sectionID }) => {
-  const [screenWidth, setScreenWidth] = useState(window.screen.width)
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  const [screenWidth, setScreenWidth] = useState(window.screen.width);
 
   window.addEventListener("resize", (event) => {
     setScreenWidth(event.currentTarget.innerWidth);
   });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
@@ -28,19 +41,48 @@ const Experince = ({ sectionID }) => {
     >
       <SectionHeading title="Experince" />
 
-      <div className={`flex md:flex-row flex-col items-center justify-center`}>
+      <div className={`flex md:flex-row flex-col items-center justify-center notSelectable`}>
         <div className={`flex flex-col`}>
-          <CompanyExpCard
-            imgSrc={cipherSavvyLogo}
-            jobTitle="Software Engineer"
-            companyTitle="Cipher Savvy"
-            location="Rawalpindi, Pakistan"
-            dateJoiningEnding="2021 - Current"
-            backgroundColor="red"
-            spacingStyle={``}
-          />
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            transition={{
+              delay: 2,
+              type: "tween",
+              duration: 1,
+              ease: ["linear"],
+            }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -50 },
+            }}
+          >
+            <CompanyExpCard
+              imgSrc={cipherSavvyLogo}
+              jobTitle="Software Engineer"
+              companyTitle="Cipher Savvy"
+              location="Rawalpindi, Pakistan"
+              dateJoiningEnding="2021 - Current"
+              backgroundColor="red"
+              spacingStyle={``}
+            />
+          </motion.div>
 
-          <div
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            transition={{
+              delay: 1,
+              type: "tween",
+              duration: 1,
+              easings: ["easeOut"],
+            }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: 20 },
+            }}
             className={`flex justify-end items-center ${classes.height320} ${classes.respDate}`}
           >
             <span
@@ -48,14 +90,27 @@ const Experince = ({ sectionID }) => {
             >
               2018
             </span>
-          </div>
+          </motion.div>
         </div>
 
         {/* Divider */}
         {screenWidth > 600 && <TimelineDivider />}
 
         <div className={`flex flex-col h-max md:mt-0 mt-8`}>
-          <div
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            transition={{
+              delay: 1,
+              type: "tween",
+              duration: 1,
+              easings: ["easeOut"],
+            }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -20 },
+            }}
             className={`flex justify-start items-center ${classes.height320} ${classes.respDate}`}
           >
             <span
@@ -63,16 +118,33 @@ const Experince = ({ sectionID }) => {
             >
               2022
             </span>
-          </div>
-          <CompanyExpCard
-            imgSrc={overrootLogo}
-            jobTitle="Software Engineer"
-            companyTitle="Overroot"
-            location="Rawalpindi, Pakistan"
-            dateJoiningEnding="2018 - 2021"
-            backgroundColor="white"
-            spacingStyle={``}
-          />
+          </motion.div>
+
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            transition={{
+              delay: 2,
+              type: "tween",
+              duration: 1,
+              ease: ["linear"],
+            }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: 50 },
+            }}
+          >
+            <CompanyExpCard
+              imgSrc={overrootLogo}
+              jobTitle="Software Engineer"
+              companyTitle="Overroot"
+              location="Rawalpindi, Pakistan"
+              dateJoiningEnding="2018 - 2021"
+              backgroundColor="white"
+              spacingStyle={``}
+            />
+          </motion.div>
         </div>
       </div>
     </div>

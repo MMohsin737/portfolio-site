@@ -1,9 +1,17 @@
+// Hooks
+import { useEffect } from "react";
+
+// Plugin
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 // UI Widgets
 import SectionHeading from "../../ui/section-heading/SectionHeading";
 import SectionDivider from "../../ui/section-divider/SectionDivider";
 
 // Styling
 import classes from "./ToolsTechnologies.module.css";
+import "../../../theme/utilities.css";
 
 // Image
 import figma from "../../../assets/images/figma-icon.svg";
@@ -25,6 +33,8 @@ import nodeIcon from "../../../assets/images/node-js.svg";
 import reactJSicon from "../../../assets/images/react-js.svg";
 
 const ToolsTechnologies = ({ sectionID }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 1 });
   const designIcons = [figma, xd, ai, ps, blender];
   const developmentIcons = [
     antUIdesign,
@@ -41,29 +51,83 @@ const ToolsTechnologies = ({ sectionID }) => {
     dart,
   ];
 
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
-    <div id={sectionID} className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}>
+    <div
+      id={sectionID}
+      className={`mt-28 mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}
+    >
       <SectionHeading title="Technologies" subtitle="" />
 
-      <div className={`mx-auto w-full flex lg:flex-row flex-col justify-center lg:items-start items-center`}>
+      <div
+        className={`mx-auto w-full flex lg:flex-row flex-col justify-center lg:items-start items-center`}
+      >
         {/* Design Icons */}
         <div className={`flex-1 md:w-4/5 w-full`}>
-          <h6 className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}>Design</h6>
+          <h6
+            className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}
+          >
+            Design
+          </h6>
 
-          <div className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1`}>
+          <div
+            className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1 notSelectable`}
+          >
             {designIcons.map((item, index) => {
               if (index === 0) {
                 return (
-                  <div key={index} className={`w-8 mx-auto my-5`}>
-                    <img className={`w-full h-full object-contain`} src={item} alt="" />
-                  </div>
+                  <motion.div
+                    key={index}
+                    ref={ref}
+                    initial="hidden"
+                    transition={{
+                      type: "spring",
+                      mass: 2,
+                    }}
+                    animate={controls}
+                    variants={{
+                      visible: { scale: 1 },
+                      hidden: { scale: 0 },
+                    }}
+                    className={`w-8 mx-auto my-5`}
+                  >
+                    <img
+                      className={`w-full h-full object-contain`}
+                      src={item}
+                      alt=""
+                    />
+                  </motion.div>
                 );
               } else {
                 return (
-                  <div key={index} className={`w-14 mx-auto my-5`}>
-                    <img className={`w-full h-full object-contain`} src={item} alt="" />
-                  </div>
+                  <motion.div
+                    key={index}
+                    ref={ref}
+                    initial="hidden"
+                    transition={{
+                      delay: index / 2.1,
+                      type: "spring",
+                      mass: 2,
+                    }}
+                    animate={controls}
+                    variants={{
+                      visible: { scale: 1 },
+                      hidden: { scale: 0 },
+                    }}
+                    className={`w-14 mx-auto my-5`}
+                  >
+                    <img
+                      className={`w-full h-full object-contain`}
+                      src={item}
+                      alt=""
+                    />
+                  </motion.div>
                 );
               }
             })}
@@ -77,14 +141,39 @@ const ToolsTechnologies = ({ sectionID }) => {
 
         {/* Development Icons */}
         <div className={`flex-1 md:w-4/5 w-full lg:mt-0 mt-8`}>
-          <h6 className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}>Development</h6>
+          <h6
+            className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}
+          >
+            Development
+          </h6>
 
-          <div className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1`}>
+          <div
+            className={`md:mt-5 mt-1 lg:w-4/5 w-full mx-auto grid grid-cols-5 gap-1 notSelectable`}
+          >
             {developmentIcons.map((item, index) => {
               return (
-                <div key={index} className={`w-14 mx-auto my-5`}>
-                  <img className={`w-full h-full object-contain`} src={item} alt="" />
-                </div>
+                <motion.div
+                  key={index}
+                  ref={ref}
+                  initial="hidden"
+                  transition={{
+                    delay: index / 2.1,
+                    type: "spring",
+                    mass: 2,
+                  }}
+                  animate={controls}
+                  variants={{
+                    visible: { scale: 1 },
+                    hidden: { scale: 0 },
+                  }}
+                  className={`w-14 mx-auto my-5`}
+                >
+                  <img
+                    className={`w-full h-full object-contain`}
+                    src={item}
+                    alt=""
+                  />
+                </motion.div>
               );
             })}
           </div>

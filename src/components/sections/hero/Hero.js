@@ -30,7 +30,7 @@ const Hero = ({ sectionID, children }) => {
     // >
     <div
       id={sectionID}
-      className={`flex flex-col mt-12 mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}
+      className={`mb-28 flex flex-col mt-12 mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}
     >
       <div className={`w-full lg:mb-10 mb-5`}>{children}</div>
 
@@ -48,7 +48,7 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink1"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 1.5, type: "spring", duration: 2 }}
+                transition={{ delay: 1.5, type: "spring", duration: 2, mass: 2 }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
@@ -68,7 +68,7 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink2"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 1.8, type: "spring", duration: 2 }}
+                transition={{ delay: 1.8, type: "spring", duration: 2, mass: 2 }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
@@ -86,7 +86,7 @@ const Hero = ({ sectionID, children }) => {
                 key="extSocioIconLink3"
                 initial="hidden"
                 animate={controls}
-                transition={{ delay: 2.2, type: "spring", duration: 2 }}
+                transition={{ delay: 2.2, type: "spring", duration: 2, mass: 2 }}
                 variants={{
                   visible: { opacity: 1, x: 0 },
                   hidden: { opacity: 0, x: -10 },
@@ -106,10 +106,10 @@ const Hero = ({ sectionID, children }) => {
             className={`flex flex-row w-full lg:justify-start justify-center p-3`}
           >
             <motion.div
-              key="CTABTN2"
+              key="CTABTN1"
               initial="hidden"
               animate={controls}
-              transition={{ delay: 2.5, type: "spring", duration: 2 }}
+              transition={{ delay: 2.5, type: "spring", duration: 2, mass: 2 }}
               variants={{
                 visible: { scale: 1 },
                 hidden: { scale: 0 },
@@ -126,7 +126,7 @@ const Hero = ({ sectionID, children }) => {
               key="CTABTN2"
               initial="hidden"
               animate={controls}
-              transition={{ delay: 2.8, type: "spring", duration: 2 }}
+              transition={{ delay: 2.8, type: "spring", duration: 2, mass: 2 }}
               variants={{
                 visible: { scale: 1 },
                 hidden: { scale: 0 },
@@ -144,7 +144,7 @@ const Hero = ({ sectionID, children }) => {
         <motion.div
           initial="hidden"
           animate={controls}
-          transition={{ type: "spring", duration: 1.3 }}
+          transition={{ type: "spring", duration: 1.3,  mass: 2 }}
           variants={{
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0 },
