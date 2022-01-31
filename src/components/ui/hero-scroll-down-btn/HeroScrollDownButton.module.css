@@ -1,37 +1,83 @@
-.pulse {
-  transform-style: preserve-3d;
-  animation: pulse 2s ease-in-out 0s infinite both;
-  transition: all 350ms;
+.scrollDwn {
+  display: block;
+  width: 28px;
+  height: 48px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  position: relative;
+  border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
 }
 
-.pulse:hover {
-  animation: none;
+.scrollDwn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  background: #FFF;
+  border-radius: 50%;
+
+  -webkit-transform: translate(-50% , 50%);
+  -moz-transform: translate(-50% , 50%);
+  -ms-transform: translate(-50% , 50%);
+  -o-transform: translate(-50% , 50%);
+  transform: translate(-50% , 50%);
+
+  -webkit-animation: fadeDown 1s ease-out infinite;
+  -moz-animation: fadeDown 1s ease-out infinite;
+  -ms-animation: fadeDown 1s ease-out infinite;
+  -o-animation: fadeDown 1s ease-out infinite;
+  animation: fadeDown 1s ease-out infinite;
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes fadeDown {
   0% {
-    -webkit-transform: rotate3D(0, 0, 0, 0deg) translateY(0px);
-  }
-  50% {
-    -webkit-transform: rotate3D(0, 1, 0, 90deg) translateY(15px);
+    top: 0%;
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate3D(0, 0, 0, 0deg) translateY(0px);
+    top: 60%;
+    opacity: 0;
   }
 }
-
-@keyframes pulse {
+@-moz-keyframes fadeDown {
   0% {
-    -moz-transform: rotate3D(0, 0, 0, 0deg) translateY(0px);
-
-    transform: rotate3D(0, 0, 0, 0deg) translateY(0px);
-  }
-  50% {
-    -moz-transform: rotate3D(0, 1, 0, 90deg) translateY(15px);
-    transform: rotate3D(0, 1, 0, 90deg) translateY(15px);
+    top: 0%;
+    opacity: 1;
   }
   100% {
-    -moz-transform: rotate3D(0, 0, 0, 0deg) translateY(0px);
-    transform: rotate3D(0, 0, 0, 0deg) translateY(0px);
+    top: 60%;
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeDown {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    top: 60%;
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeDown {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    top: 60%;
+    opacity: 0;
+  }
+}
+@keyframes fadeDown {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    top: 60%;
+    opacity: 0;
   }
 }

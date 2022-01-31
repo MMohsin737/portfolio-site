@@ -6,6 +6,7 @@ import HeroImage from "../../ui/hero-Image/HeroImage";
 import SocialIcon from "../../ui/social-icons/SocialIcon";
 import HeroTextConent from "../../ui/hero-text-content/HeroTextContent";
 import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
+import HeroScrollDownButton from "../../ui/hero-scroll-down-btn/HeroScrollDownButton";
 
 // Utils
 import { scrollTo } from "../../../utils/utils";
@@ -30,12 +31,12 @@ const Hero = ({ sectionID, children }) => {
     // >
     <div
       id={sectionID}
-      className={`mb-28 flex flex-col mt-12 mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}
+      className={`pb-28 flex flex-col mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}
     >
-      <div className={`w-full lg:mb-10 mb-5`}>{children}</div>
+      <div className={`w-full mt-5 mb-5`}>{children}</div>
 
       <div
-        className={`w-full mt-10 h-full flex lg:flex-row flex-col-reverse justify-between items-center`}
+        className={`w-full mt-5 py-2 flex lg:flex-row flex-col-reverse justify-between items-center`}
       >
         <div className={`flex-1 flex flex-col justify-center items-start`}>
           <HeroTextConent />
@@ -174,15 +175,17 @@ const Hero = ({ sectionID, children }) => {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0 },
           }}
-          className={`xl:w-3/5 lg:w-full md:w-2/5 w-9/12 lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
+          className={`xl:w-3/5 lg:w-96 md:w-2/5 w-9/12 lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
         >
-          <div className={`xl:w-4/6 lg:w-4/5 w-full lg:ml-auto`}>
+          <div className={`xl:w-4/6 lg:w-96 w-full lg:ml-auto`}>
             <HeroImage imageSrc={image} />
           </div>
         </motion.div>
       </div>
 
-      {/* <HeroScrollDownButton /> */}
+      {/* <div className={`flex-auto`}>
+      <HeroScrollDownButton />
+      </div> */}
     </div>
   );
 };
