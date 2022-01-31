@@ -1,6 +1,6 @@
 {
   "short_name": "Muhammad Mohsin",
-  "name": "Hi! My name is Mohsin and I am UI Designer and Frontend Developer, take a look at my portfolio to learn more about me.",
+  "name": "Muhammad Mohsin",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#05e3be",
+  "background_color": "#141628"
 }
