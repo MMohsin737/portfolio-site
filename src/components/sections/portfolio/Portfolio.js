@@ -13,11 +13,11 @@ import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
 import classes from "./Portfolio.module.css";
 
 // Images
-import ElysiumSols from "../../../assets/images/elysium_sol.png";
-import ExhangeRateApp from "../../../assets/images/exchange_app.png";
+import ElysiumSols from "../../../assets/images/elysium_sol.jpg";
+import ExhangeRateApp from "../../../assets/images/exchange_app.jpg";
 import SwiftTraning from "../../../assets/images/swift_traning.jpg";
-import EBookGuard from "../../../assets/images/ebook_guard.png";
-import Critic from "../../../assets/images/critic.png";
+import EBookGuard from "../../../assets/images/ebook_guard.jpg";
+import Critic from "../../../assets/images/critic.jpg";
 
 const Portfolio = ({ sectionID }) => {
   const scaleImg = classes.enlarge;
@@ -84,15 +84,15 @@ const Portfolio = ({ sectionID }) => {
             key={index}
             initial="hidden"
             transition={{
-              delay: index / 5,
+              delay: index / 1.5,
               type: "tween",
               ease: ["easeInOut"],
               duration: 1,
             }}
             animate={controls}
             variants={{
-              visible: { opacity: 1 },
-              hidden: { opacity: 0 },
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
             }}
             className={`w-full overflow-hidden relative ${classes.roundBorder} ${classes.parentHover}`}
           >
