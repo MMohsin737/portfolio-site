@@ -6,7 +6,7 @@ import HeroImage from "../../ui/hero-Image/HeroImage";
 import SocialIcon from "../../ui/social-icons/SocialIcon";
 import HeroTextConent from "../../ui/hero-text-content/HeroTextContent";
 import CtaBtnV1 from "../../ui/cta-btn-v1/CtaBtnV1";
-import HeroScrollDownButton from "../../ui/hero-scroll-down-btn/HeroScrollDownButton";
+// import HeroScrollDownButton from "../../ui/hero-scroll-down-btn/HeroScrollDownButton";
 
 // Utils
 import { scrollTo } from "../../../utils/utils";

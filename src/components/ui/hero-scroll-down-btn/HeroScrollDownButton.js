@@ -2,7 +2,7 @@
 import classes from "./HeroScrollDownButton.module.css";
 
 // Image
-import downArrow from "../../../assets/images/down-arrow.svg";
+// import downArrow from "../../../assets/images/down-arrow.svg";
 
 const HeroScrollDownButton = ({ sectionID, children }) => {
   return (
