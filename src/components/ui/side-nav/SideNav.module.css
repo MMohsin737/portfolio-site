@@ -104,8 +104,8 @@
   width: 100%;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .menuButton {
-    font-size: 18px;
+    font-size: 2em;
   }
 }

@@ -183,7 +183,7 @@ const Hero = ({ sectionID, children }) => {
         </motion.div>
       </div>
 
-      <div className={`flex-auto flex justify-center items-center`}>
+      <div className={`flex-auto flex justify-center lg:opacity-100 opacity-0 items-center`}>
       <HeroScrollDownButton />
       </div>
     </div>
