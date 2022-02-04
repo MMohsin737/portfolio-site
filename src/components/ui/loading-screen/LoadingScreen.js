@@ -1,5 +1,6 @@
 // Styling
 import classes from "./LoadingScreen.module.css";
+import "../../../theme/utilities.css";
 
 // Utils
 import { diableNAV } from "../../../utils/utils";
