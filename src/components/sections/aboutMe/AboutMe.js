@@ -71,11 +71,11 @@ const AboutMe = ({ sectionID }) => {
           className={`lg:w-1/2 w-full flex flex-col justify-center items-start font-light lg:text-left text-center lg:ml-5 ml-0`}
         >
           <p className={`text-lg leading-8 text-white`}>
-            Innovative Front End Developer with 2+ years of experience in building and maintaining responsive websites
-            in the recruiting industry. Proficient in HTML, CSS, JavaScript, Dart, React and Flutter; plus modern
-            libraries and frameworks. Passionate about usability and possess working knowledge of Adobe XD & Figma.
-            Experience has taught me to take accessibility and responsiveness seriously. I possess a positive “can-do”
-            attitude where I am able to walk the extra mile in order to get the job done.
+            Innovative Front-End Developer with 2+ years of experience in building and maintaining responsive websites
+            in Startups. Proficient in HTML, CSS, JavaScript, Dart, React, and Flutter; plus, modern libraries and
+            frameworks. Passionate about usability and possess working knowledge of Adobe XD & Figma. Experience has
+            taught me to take accessibility and responsiveness seriously. I possess a positive “can-do” attitude where I
+            can walk the extra mile to get the job done.
           </p>
 
           <motion.div

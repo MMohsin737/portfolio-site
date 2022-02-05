@@ -1,11 +1,11 @@
 export const enableNAV = () => {
-  const body = document.getElementsByTagName("BODY")[0];
-  body.classList.remove("disableScroll");
+  const html = document.getElementsByTagName("HTML")[0];
+  html.classList.remove("disableScroll");
 };
 
 export const diableNAV = () => {
-  const body = document.getElementsByTagName("BODY")[0];
-  body.classList.add("disableScroll");
+  const html = document.getElementsByTagName("HTML")[0];
+  html.classList.add("disableScroll");
 };
 
 export const openNav = () => {
@@ -19,25 +19,18 @@ export const closeNav = () => {
 };
 
 export const scrollTo = (sectionID) => {
-  document
-    .querySelector("#" + sectionID)
-    .scrollIntoView({ behavior: "smooth" });
+  document.querySelector("#" + sectionID).scrollIntoView({ behavior: "smooth" });
 };
 
 export const removeLoadingScreen = () => {
   window.onload = () => {
     document
       .getElementById("initialLoadingScreen")
-      .animate(
-        { opacity: 0 },
-        { duration: 500, iterations: 1, easing: "ease-out" }
-      ).onfinish = () => {
+      .animate({ opacity: 0 }, { duration: 500, iterations: 1, easing: "ease-out" }).onfinish = () => {
       enableNAV();
       document
         .querySelector("#initialLoadingScreen")
-        .parentNode.removeChild(
-          document.getElementById("initialLoadingScreen")
-        );
+        .parentNode.removeChild(document.getElementById("initialLoadingScreen"));
     };
   };
 };
