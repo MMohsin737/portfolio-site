@@ -69,13 +69,13 @@ const LetsTalk = ({ sectionID }) => {
             visible: { opacity: 1, x: 0 },
             hidden: { opacity: 0, x: 50 },
           }}
-          className={`md:text-3xl text-base text-center mt-5 font-light`}
+          className={`md:text-3xl text-base text-center mt-3 font-light`}
         >
           <a
-            href="email:muhammad.mohin.dev@gmail.com"
+            href="email:contact@muhammad-mohsin.com"
             className={`mx-auto ${classes.letterSpace3}`}
           >
-            muhammad.mohin.dev@gmail.com
+            contact@muhammad-mohsin.com
           </a>
         </motion.h4>
 
