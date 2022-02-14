@@ -26,11 +26,11 @@ import bootstrap from "../../../assets/images/bootstrap.svg";
 import css3 from "../../../assets/images/css-3.svg";
 import html5 from "../../../assets/images/html-5.svg";
 import jsIcon from "../../../assets/images/javascript.svg";
-import flutter from "../../../assets/images/flutter.svg";
-import dart from "../../../assets/images/dart.svg";
-import expressIcon from "../../../assets/images/express-js.svg";
-import nodeIcon from "../../../assets/images/node-js.svg";
-import reactJSicon from "../../../assets/images/react-js.svg";
+// import flutter from "../../../assets/images/flutter.svg";
+// import dart from "../../../assets/images/dart.svg";
+// import expressIcon from "../../../assets/images/express-js.svg";
+// import nodeIcon from "../../../assets/images/node-js.svg";
+// import reactJSicon from "../../../assets/images/react-js.svg";
 
 const ToolsTechnologies = ({ sectionID }) => {
   const controls = useAnimation();
