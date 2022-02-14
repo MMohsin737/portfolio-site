@@ -12,7 +12,7 @@ import TimelineDivider from "../../ui/timeline-divider/TimelineDivider";
 
 // Image
 import cipherSavvyLogo from "../../../assets/images/cipher-savvy-logo.svg";
-import selfLogo from "../../../assets/images/designer.svg";
+import microMerger from "../../../assets/images/micromerger.png";
 
 // Styling
 import classes from "./Experince.module.css";
@@ -89,7 +89,7 @@ const Experince = ({ sectionID }) => {
             <span
               className={`block h-fit w-fit text-lg text-gray-500 font-medium `}
             >
-              2018
+              2020
             </span>
           </motion.div>
         </div>
@@ -135,7 +135,7 @@ const Experince = ({ sectionID }) => {
             }}
           >
             <CompanyExpCard
-              imgSrc={selfLogo}
+              imgSrc={microMerger}
               jobTitle="Product Designer"
               companyTitle="Self"
               location="Islamabad, Pakistan"
