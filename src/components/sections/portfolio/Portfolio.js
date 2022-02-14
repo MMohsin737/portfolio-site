@@ -141,7 +141,7 @@ const Portfolio = ({ sectionID }) => {
           initial="hidden"
           animate={controls}
           transition={{
-            delay: 2,
+            delay: 3,
             type: "tween",
             duration: 1,
             ease: ["easeInOut"],
@@ -152,7 +152,7 @@ const Portfolio = ({ sectionID }) => {
           }}
         >
           <CtaBtnV1
-            title="More Designs"
+            title="More Projetcs"
             customStyle={`mr-9`}
             onPressed={() =>
               window
@@ -162,7 +162,7 @@ const Portfolio = ({ sectionID }) => {
           />
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           key="CTA_BTN_PORTFOLIO_2"
           initial="hidden"
           animate={controls}
@@ -184,7 +184,7 @@ const Portfolio = ({ sectionID }) => {
               window.open("https://github.com/MMohsin737", "_blank").focus()
             }
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

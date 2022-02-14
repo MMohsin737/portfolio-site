@@ -44,11 +44,11 @@ const ToolsTechnologies = ({ sectionID }) => {
     css3,
     html5,
     jsIcon,
-    nodeIcon,
-    expressIcon,
-    reactJSicon,
-    flutter,
-    dart,
+    // nodeIcon,
+    // expressIcon,
+    // reactJSicon,
+    // flutter,
+    // dart,
   ];
 
   useEffect(() => {
@@ -135,7 +135,7 @@ const ToolsTechnologies = ({ sectionID }) => {
         </div>
 
         <SectionDivider
-          dividerHeight={`my-auto ${classes["height-260px"]}`}
+          dividerHeight={`my-auto ${classes["height-190px"]}`}
           customStyle={`lg:block hidden`}
         />
 
@@ -144,7 +144,7 @@ const ToolsTechnologies = ({ sectionID }) => {
           <h6
             className={`uppercase text-white md:text-3xl text-2xl text-center md:font-light font-normal`}
           >
-            Development
+            Other
           </h6>
 
           <div

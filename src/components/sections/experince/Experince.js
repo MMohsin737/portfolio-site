@@ -12,7 +12,7 @@ import TimelineDivider from "../../ui/timeline-divider/TimelineDivider";
 
 // Image
 import cipherSavvyLogo from "../../../assets/images/cipher-savvy-logo.svg";
-import overrootLogo from "../../../assets/images/overroot-logo.png";
+import selfLogo from "../../../assets/images/designer.svg";
 
 // Styling
 import classes from "./Experince.module.css";
@@ -135,10 +135,10 @@ const Experince = ({ sectionID }) => {
             }}
           >
             <CompanyExpCard
-              imgSrc={overrootLogo}
-              jobTitle="Software Engineer"
-              companyTitle="Overroot"
-              location="Rawalpindi, Pakistan"
+              imgSrc={selfLogo}
+              jobTitle="Product Designer"
+              companyTitle="Self"
+              location="Islamabad, Pakistan"
               dateJoiningEnding="2018 - 2021"
               backgroundColor="white"
               spacingStyle={``}

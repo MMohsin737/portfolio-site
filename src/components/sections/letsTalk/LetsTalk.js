@@ -106,7 +106,7 @@ const LetsTalk = ({ sectionID }) => {
             />
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             transition={{
               delay: 0.8,
@@ -126,7 +126,7 @@ const LetsTalk = ({ sectionID }) => {
               type="GitHub"
               linkToProfile={"https://github.com/MMohsin737"}
             />
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial="hidden"

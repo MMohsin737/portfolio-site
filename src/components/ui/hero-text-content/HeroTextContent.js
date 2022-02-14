@@ -35,7 +35,7 @@ const HeroTextConent = () => {
         className={`${classes.mainTitle} text-white font-light lg:text-left text-center`}
       >
         Hi! I am{" "}
-        <span className={`font-bold ${classes["text-Primary-Color"]}`}>
+        <span className={`font-bold uppercase ${classes["text-Primary-Color"]}`}>
           Mohsin
         </span>
       </motion.h1>
@@ -55,7 +55,7 @@ const HeroTextConent = () => {
         <span className={`font-bold ${classes["text-Primary-Color"]}`}>
           self-taught
         </span>{" "}
-        UI designer &
+        user interface &
         <motion.span
           initial="hidden"
           animate={controls}
@@ -68,7 +68,7 @@ const HeroTextConent = () => {
           variants={animVariants}
           className={`block w-full`}
         >
-          front-end developer.
+          user experince designer.
         </motion.span>
       </motion.h3>
     </div>

@@ -70,12 +70,18 @@ const AboutMe = ({ sectionID }) => {
           variants={animVariantContent}
           className={`lg:w-1/2 w-full flex flex-col justify-center items-start font-light lg:text-left text-center lg:ml-5 ml-0`}
         >
-          <p className={`text-lg leading-8 text-white`}>
+          {/* <p className={`text-lg leading-8 text-white`}>
             Innovative Front-End Developer with 2+ years of experience in building and maintaining responsive websites
             in Startups. Proficient in HTML, CSS, JavaScript, Dart, React, and Flutter; plus, modern libraries and
             frameworks. Passionate about usability and possess working knowledge of Adobe XD & Figma. Experience has
             taught me to take accessibility and responsiveness seriously. I possess a positive “can-do” attitude where I
             can walk the extra mile to get the job done.
+          </p> */}
+          <p className={`text-lg leading-7 text-justify text-white`}>
+            Creative UX/UI Designer with 6+ months expeince in facilitating and supporting human interactions with complex 
+            systems and software. Maintains user-centric designs while adhering to prescribed interface principals and related 
+            development goals. Dedicated to creating inviting and unintimidating interfaces for everything from simple 
+            open-source applications to complex proprietary systems.
           </p>
 
           <motion.div

@@ -70,7 +70,7 @@ const Hero = ({ sectionID, children }) => {
                 />
               </motion.div>
 
-              <motion.div
+              {/* <motion.div
                 key="extSocioIconLink2"
                 initial="hidden"
                 animate={controls}
@@ -91,14 +91,14 @@ const Hero = ({ sectionID, children }) => {
                   type="GitHub"
                   linkToProfile={"https://github.com/MMohsin737"}
                 />
-              </motion.div>
+              </motion.div> */}
 
               <motion.div
                 key="extSocioIconLink3"
                 initial="hidden"
                 animate={controls}
                 transition={{
-                  delay: 2.2,
+                  delay: 1.8,
                   type: "spring",
                   duration: 2,
                   mass: 2,
@@ -126,7 +126,7 @@ const Hero = ({ sectionID, children }) => {
               initial="hidden"
               animate={controls}
               transition={{
-                delay: 2.5,
+                delay: 1.8,
                 type: "tween",
                 duration: 1,
                 ease: ["easeInOut"],
@@ -148,7 +148,7 @@ const Hero = ({ sectionID, children }) => {
               initial="hidden"
               animate={controls}
               transition={{
-                delay: 2.8,
+                delay: 2.1,
                 type: "tween",
                 duration: 1,
                 ease: ["easeInOut"],
