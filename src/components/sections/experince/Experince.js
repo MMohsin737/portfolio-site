@@ -136,7 +136,7 @@ const Experince = ({ sectionID }) => {
           >
             <CompanyExpCard
               imgSrc={microMerger}
-              jobTitle="Product Designer"
+              jobTitle="UI/UX - Frontend"
               companyTitle="Self"
               location="Islamabad, Pakistan"
               dateJoiningEnding="2018 - 2021"
