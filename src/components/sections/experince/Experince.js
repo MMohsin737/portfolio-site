@@ -137,9 +137,9 @@ const Experince = ({ sectionID }) => {
             <CompanyExpCard
               imgSrc={microMerger}
               jobTitle="UI/UX - Frontend"
-              companyTitle="Self"
+              companyTitle="Micro Merger"
               location="Islamabad, Pakistan"
-              dateJoiningEnding="2018 - 2021"
+              dateJoiningEnding="2020 - 2021"
               backgroundColor="white"
               spacingStyle={``}
             />
