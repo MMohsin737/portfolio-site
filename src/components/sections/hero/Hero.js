@@ -43,78 +43,105 @@ const Hero = ({ sectionID, children }) => {
 
           <AnimatePresence>
             <div
-              className={`flex flex-row w-full lg:justify-start justify-center mb-8`}
+              className={`w-full flex flex-col lg:justify-start justify-center items-start mb-8`}
             >
-              <motion.div
-                key="extSocioIconLink1"
-                initial="hidden"
-                animate={controls}
-                transition={{
-                  delay: 1.5,
-                  type: "spring",
-                  duration: 2,
-                  mass: 2,
-                }}
-                variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -10 },
-                }}
-              >
-                <SocialIcon
-                  styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
-                  styleSpacing={`mr-3`}
-                  type="LinkedIn"
-                  linkToProfile={
-                    "https://www.linkedin.com/in/muhammad-mohsin-166112159/"
-                  }
-                />
-              </motion.div>
+              <div className={`w-full flex flex-row lg:justify-start justify-center items-center`}>
+                <motion.div
+                  key="extSocioIconLink1"
+                  initial="hidden"
+                  animate={controls}
+                  transition={{
+                    delay: 1.5,
+                    type: "spring",
+                    duration: 2,
+                    mass: 2,
+                  }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: -10 },
+                  }}
+                >
+                  <SocialIcon
+                    styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
+                    styleSpacing={`mr-3`}
+                    type="LinkedIn"
+                    linkToProfile={
+                      "https://www.linkedin.com/in/muhammad-mohsin-166112159/"
+                    }
+                  />
+                </motion.div>
 
-              {/* <motion.div
-                key="extSocioIconLink2"
-                initial="hidden"
-                animate={controls}
-                transition={{
-                  delay: 1.8,
-                  type: "spring",
-                  duration: 2,
-                  mass: 2,
-                }}
-                variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -10 },
-                }}
-              >
-                <SocialIcon
-                  styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
-                  styleSpacing={`mr-3`}
-                  type="GitHub"
-                  linkToProfile={"https://github.com/MMohsin737"}
-                />
-              </motion.div> */}
+                <motion.div
+                  key="extSocioIconLink3"
+                  initial="hidden"
+                  animate={controls}
+                  transition={{
+                    delay: 1.8,
+                    type: "spring",
+                    duration: 2,
+                    mass: 2,
+                  }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: -10 },
+                  }}
+                >
+                  <SocialIcon
+                    styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
+                    styleSpacing={``}
+                    type="Behance"
+                    linkToProfile={"https://www.behance.net/muhammadmohsin6"}
+                  />
+                </motion.div>
+              </div>
 
-              <motion.div
-                key="extSocioIconLink3"
-                initial="hidden"
-                animate={controls}
-                transition={{
-                  delay: 1.8,
-                  type: "spring",
-                  duration: 2,
-                  mass: 2,
-                }}
-                variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -10 },
-                }}
-              >
-                <SocialIcon
-                  styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
-                  styleSpacing={``}
-                  type="Behance"
-                  linkToProfile={"https://www.behance.net/muhammadmohsin6"}
-                />
-              </motion.div>
+              <div className={`mt-3 w-full flex flex-row lg:justify-start justify-center items-center`}>
+                <motion.div
+                  key="extSocioIconLink3"
+                  initial="hidden"
+                  animate={controls}
+                  transition={{
+                    delay: 2,
+                    type: "spring",
+                    duration: 2,
+                    mass: 2,
+                  }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: -10 },
+                  }}
+                >
+                  <SocialIcon
+                    styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
+                    styleSpacing={`mr-3`}
+                    type="Dribbble"
+                    linkToProfile={"https://dribbble.com/mmohsin737"}
+                  />
+                </motion.div>
+
+                <motion.div
+                  key="extSocioIconLink3"
+                  initial="hidden"
+                  animate={controls}
+                  transition={{
+                    delay: 2.2,
+                    type: "spring",
+                    duration: 2,
+                    mass: 2,
+                  }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: -10 },
+                  }}
+                >
+                  <SocialIcon
+                    styleClasses={`xl:w-8 w-6 xl:h-8 h-6`}
+                    styleSpacing={``}
+                    type="ArtStation"
+                    linkToProfile={"https://www.artstation.com/mmohsin"}
+                  />
+                </motion.div>
+              </div>
             </div>
           </AnimatePresence>
 
@@ -184,7 +211,7 @@ const Hero = ({ sectionID, children }) => {
       </div>
 
       <div className={`flex-auto flex justify-center lg:opacity-100 opacity-0 items-center`}>
-      <HeroScrollDownButton />
+        <HeroScrollDownButton />
       </div>
     </div>
   );

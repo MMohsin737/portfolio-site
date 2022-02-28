@@ -80,75 +80,103 @@ const LetsTalk = ({ sectionID }) => {
         </motion.h4>
 
         <div
-          className={`flex flex-row mx-auto md:justify-center justify-center mb-8 mt-5`}
+          className={`flex md:flex-row flex-col mx-auto md:justify-center justify-center mb-8 mt-5`}
         >
-          <motion.div
-            initial="hidden"
-            transition={{
-              delay: 0.5,
-              type: "tween",
-              ease: ["easeInOut"],
-              duration: 1,
-            }}
-            animate={controls}
-            variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 30 },
-            }}
-          >
-            <SocialIcon
-              styleClasses={`md:w-8 w-6 md:h-8 h-6`}
-              styleSpacing={`mr-3`}
-              type="LinkedIn"
-              linkToProfile={
-                "https://www.linkedin.com/in/muhammad-mohsin-166112159/"
-              }
-            />
-          </motion.div>
+          <div className={`md:w-fit w-full md:mr-3 mr-0 flex felx-row md:justify-center justify-center`}>
+            <motion.div
+              initial="hidden"
+              transition={{
+                delay: 0.5,
+                type: "tween",
+                ease: ["easeInOut"],
+                duration: 1,
+              }}
+              animate={controls}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 30 },
+              }}
+            >
+              <SocialIcon
+                styleClasses={`md:w-8 w-6 md:h-8 h-6`}
+                styleSpacing={`mr-3`}
+                type="LinkedIn"
+                linkToProfile={
+                  "https://www.linkedin.com/in/muhammad-mohsin-166112159/"
+                }
+              />
+            </motion.div>
 
-          {/* <motion.div
-            initial="hidden"
-            transition={{
-              delay: 0.8,
-              type: "tween",
-              ease: ["easeInOut"],
-              duration: 1,
-            }}
-            animate={controls}
-            variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 30 },
-            }}
-          >
-            <SocialIcon
-              styleClasses={`md:w-8 w-6 md:h-8 h-6`}
-              styleSpacing={`mr-3`}
-              type="GitHub"
-              linkToProfile={"https://github.com/MMohsin737"}
-            />
-          </motion.div> */}
+            <motion.div
+              initial="hidden"
+              transition={{
+                delay: 1,
+                type: "tween",
+                ease: ["easeInOut"],
+                duration: 1,
+              }}
+              animate={controls}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 30 },
+              }}
+            >
+              <SocialIcon
+                styleClasses={`md:w-8 w-6 md:h-8 h-6`}
+                styleSpacing={``}
+                type="Behance"
+                linkToProfile={"https://www.behance.net/muhammadmohsin6"}
+              />
+            </motion.div>
+          </div>
 
-          <motion.div
-            initial="hidden"
-            transition={{
-              delay: 1.3,
-              type: "tween",
-              ease: ["easeInOut"],
-              duration: 1,
-            }}
-            animate={controls}
-            variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 30 },
-            }}
-          >
-            <SocialIcon
-              styleClasses={`md:w-8 w-6 md:h-8 h-6`}
-              styleSpacing={``}
-              type="Behance"
-              linkToProfile={"https://www.behance.net/muhammadmohsin6"}
-            />
-          </motion.div>
+          <div className={`md:w-fit w-full md:mt-0 mt-3 flex felx-row md:justify-center justify-center`}>
+            <motion.div
+              key="extSocioIconLink3"
+              initial="hidden"
+              animate={controls}
+              transition={{
+                delay: 1.5,
+                type: "tween",
+                ease: ["easeInOut"],
+                duration: 1,
+              }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 30 },
+              }}
+            >
+              <SocialIcon
+                styleClasses={`md:w-8 w-6 md:h-8 h-6`}
+                styleSpacing={`mr-3`}
+                type="Dribbble"
+                linkToProfile={"https://dribbble.com/mmohsin737"}
+              />
+            </motion.div>
+
+            <motion.div
+              key="extSocioIconLink3"
+              initial="hidden"
+              animate={controls}
+              transition={{
+                delay: 2,
+                type: "tween",
+                ease: ["easeInOut"],
+                duration: 1,
+              }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 30 },
+              }}
+            >
+              <SocialIcon
+                styleClasses={`md:w-8 w-6 md:h-8 h-6`}
+                styleSpacing={``}
+                type="ArtStation"
+                linkToProfile={"https://www.artstation.com/mmohsin"}
+              />
+            </motion.div>
+          </div>
         </div>
 
         <motion.h1

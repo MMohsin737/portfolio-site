@@ -5,30 +5,40 @@ import classes from "./SocialIcon.module.css";
 import linkedInIcon from "../../../assets/images/linkedIn-icon.svg";
 import gitHubIcon from "../../../assets/images/github-icon.svg";
 import behanceIcon from "../../../assets/images/behance-icon.svg";
+import artstationIcon from "../../../assets/images/artstation.svg";
+import dribbbleIcon from "../../../assets/images/dribbble.svg";
 
 const SocialIcon = ({ styleClasses, styleSpacing, type, linkToProfile }) => {
   const icon = {
     linkedin: linkedInIcon,
     github: gitHubIcon,
     behance: behanceIcon,
+    artstation: artstationIcon,
+    dribbble: dribbbleIcon,
   };
 
   const btnBG = {
     linkedin: classes.linkedInCtnBG,
     github: classes.gitHubCtnBG,
-    behance: classes.behanceCtnBG,
+    behance: classes.behanceAndArtstationCtnBG,
+    artstation: classes.behanceAndArtstationCtnBG,
+    dribbble: classes.dribbbleCtnBG,
   };
 
   const btnHover = {
     linkedin: classes.linkedInBtnHover,
     github: classes.gitHubBtnHover,
-    behance: classes.behanceBtnHover,
+    behance: classes.behanceAndArtstationBtnHover,
+    artstation: classes.behanceAndArtstationBtnHover,
+    dribbble: classes.dribbbleBtnHover,
   };
 
   const iconBG = {
     linkedin: classes.linkedInIcoBG,
     github: classes.gitHubIcoBG,
-    behance: classes.behanceIcoBG,
+    behance: classes.behanceAndArtstationIcoBG,
+    artstation: classes.behanceAndArtstationIcoBG,
+    dribbble: classes.dribbbleIcoBG,
   };
 
   const btnType = type.toLowerCase();

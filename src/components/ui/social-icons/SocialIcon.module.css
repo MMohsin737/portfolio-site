@@ -2,6 +2,7 @@
 
 .btn {
   cursor: pointer;
+  min-width: 140px;
 }
 
 .lineHzero {
@@ -114,17 +115,17 @@
   color: #222222 !important;
 }
 
-/* --------------------------------- Behance --------------------------------- */
+/* --------------------------------- Behance & Artstation --------------------------------- */
 
-.behanceIcoBG {
+.behanceAndArtstationIcoBG {
   background-image: var(--blackLinear);
 }
 
-.behanceCtnBG {
+.behanceAndArtstationCtnBG {
   background-image: var(--blackLinearLow);
 }
 
-.behanceBtnHover {
+.behanceAndArtstationBtnHover {
   overflow: hidden;
 
   -webkit-transition: all 500ms;
@@ -134,7 +135,7 @@
   transition: all 500ms;
 }
 
-.behanceBtnHover::before {
+.behanceAndArtstationBtnHover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -152,6 +153,49 @@
   transition: all 500ms;
 }
 
-.behanceBtnHover:hover::before {
+.behanceAndArtstationBtnHover:hover::before {
   width: 100%;
 }
+
+/* --------------------------------- Dribbble --------------------------------- */
+
+.dribbbleIcoBG {
+  background-image: var(--pinkLinear);
+}
+
+.dribbbleCtnBG {
+  background-image: var(--pinkLinearLOW);
+}
+
+.dribbbleBtnHover {
+  overflow: hidden;
+
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.dribbbleBtnHover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  border-radius: 2px;
+  background-image: var(--pinkLinear);
+
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.dribbbleBtnHover:hover::before {
+  width: 100%;
+}
+
