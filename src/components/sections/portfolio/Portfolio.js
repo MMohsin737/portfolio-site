@@ -153,7 +153,8 @@ const Portfolio = ({ sectionID }) => {
         >
           <CtaBtnV1
             title="More Projetcs"
-            customStyle={`mr-9`}
+            // customStyle={`mr-9`}
+            customStyle={``}
             onPressed={() =>
               window
                 .open("https://www.behance.net/muhammadmohsin6", "_blank")
