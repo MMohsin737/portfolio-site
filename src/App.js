@@ -1,6 +1,5 @@
 // Deafult
-import { Fragment, useEffect } from 'react/cjs/react.production.min';
-import ReactPixel from 'react-facebook-pixel';
+import { Fragment } from 'react/cjs/react.production.min';
 
 // Sections
 import Hero from './components/sections/hero/Hero';
@@ -29,18 +28,6 @@ import './theme/utilities.css';
 
 function App() {
   removeLoadingScreen();
-
-  const advancedMatching = { em: 'mmohsin737@live.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-  const options = {
-    autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-    debug: false, // enable logs
-  };
-
-  useEffect(() => {
-    ReactPixel.init('708494253797147', advancedMatching, options);
-  });
-
-  ReactPixel.pageView(); // For tracking page view
 
   return (
     <Fragment>

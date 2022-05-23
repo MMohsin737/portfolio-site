@@ -47,7 +47,7 @@ const AboutMe = ({ sectionID }) => {
 
   return (
     // <div id={sectionID} className={`mt-28 mx-auto xl:w-3/4 lg:w-11/12 md:w-11/12 w-full px-5`}>
-    <div ref={ref} id={sectionID} className={`mx-auto md:container container 2xl:px-36 lg:px-32 px-5`}>
+    <div ref={ref} id={sectionID} className={`mx-auto mt-28 md:container container 2xl:px-36 lg:px-32 px-5`}>
       <SectionHeading title="About Me" />
 
       <div className={`w-full flex 2xl:flex-row xl:flex-row lg:flex-row flex-col`}>

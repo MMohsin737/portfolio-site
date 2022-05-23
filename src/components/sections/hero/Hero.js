@@ -205,7 +205,7 @@ const Hero = ({ sectionID, children }) => {
           }}
           className={`xl:w-3/5 lg:w-96 md:w-2/5 w-9/12 lg:pb-0 mb-10 lg:mx-0 mx-auto p-3`}
         >
-          <div className={`xl:w-4/6 lg:w-96 w-full lg:ml-auto`}>
+          <div className={`xl:w-3/5 lg:w-96 w-full lg:ml-auto`}>
             <HeroImage imageSrc={image} />
           </div>
         </motion.div>
