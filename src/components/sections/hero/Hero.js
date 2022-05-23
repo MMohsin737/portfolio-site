@@ -31,7 +31,8 @@ const Hero = ({ sectionID, children }) => {
     // >
     <div
       id={sectionID}
-      className={`h-screen mb-8 flex flex-col mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}
+      // className={`h-screen mb-8 flex flex-col mx-auto container 2xl:px-"36 lg:px-32 px-5 items-center`}
+      className={`mb-8 flex flex-col mx-auto container 2xl:px-36 lg:px-32 px-5 items-center`}
     >
       <div className={`w-full mt-5 mb-5`}>{children}</div>
 
@@ -210,9 +211,9 @@ const Hero = ({ sectionID, children }) => {
         </motion.div>
       </div>
 
-      <div className={`flex-auto flex justify-center lg:opacity-100 opacity-0 items-center`}>
+      {/* <div className={`flex-auto flex justify-center lg:opacity-100 opacity-0 items-center`}>
         <HeroScrollDownButton />
-      </div>
+      </div> */}
     </div>
   );
 };
